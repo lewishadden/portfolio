@@ -1,35 +1,51 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useState, useEffect } from "react";
 
-function App() {
-  const [count, setCount] = useState(0)
+import Home from "./components/Home/Home";
+import Footer from "./components/Footer";
+import About from "./components/About";
+import Experience from "./components/Experience";
+import Projects from "./components/Projects";
+import Skills from "./components/Skills";
+
+import "./App.scss";
+
+const App = () => {
+  const [resumeData, setResumeData] = useState();
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    loadResume();
+  }, []);
+
+  useEffect(() => {
+    if (resumeData) setIsLoading(false);
+  }, [resumeData]);
+
+  const loadResume = async () => {
+    const response = await fetch("portfolio-data.json");
+    const data = await response.json();
+    setResumeData(data);
+  };
 
   return (
-    <>
+    (!isLoading && (
       <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+        <Home basicInfo={resumeData.basicInfo} />
+        <About basicInfo={resumeData.basicInfo} />
+        <Projects
+          projects={resumeData.projects}
+          basicInfo={resumeData.basicInfo}
+        />
+        <Skills skills={resumeData.skills} basicInfo={resumeData.basicInfo} />
+        <Experience
+          experience={resumeData.experience}
+          basicInfo={resumeData.basicInfo}
+        />
+        <Footer basicInfo={resumeData.basicInfo} />
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
-}
+    )) ||
+    null
+  );
+};
 
-export default App
+export default App;
