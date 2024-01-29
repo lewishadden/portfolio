@@ -1,4 +1,4 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { Icon } from "@iconify/react";
 
 import "./Footer.scss";
 
@@ -8,7 +8,7 @@ const Footer = ({ basicInfo }) => {
   const networks = social.map((network) => (
     <span key={network.name} className="m-4">
       <a href={network.url} target="_blank" rel="noopener noreferrer">
-        <FontAwesomeIcon icon={["fab", network.class]} size={"lg"} />
+        <Icon icon={network.class} style={{ fontSize: "3rem" }} />
       </a>
     </span>
   ));

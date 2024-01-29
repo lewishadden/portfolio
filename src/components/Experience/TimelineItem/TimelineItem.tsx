@@ -1,6 +1,6 @@
 import { VerticalTimelineElement } from "react-vertical-timeline-component";
 import Badge from "react-bootstrap/Badge";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { Icon } from "@iconify/react";
 
 import "./TimelineItem.scss";
 
@@ -45,12 +45,12 @@ const TimelineItem = ({
         color: "#fff",
       }}
       icon={
-        <FontAwesomeIcon
-          icon={["fab", icon]}
+        <Icon
+          icon={icon}
           style={{
-            width: "30px",
-            height: "30px",
-            margin: "-15px 0 0 -15px",
+            width: "40px",
+            height: "40px",
+            margin: "-20px 0px 0px -20px",
           }}
         />
       }
