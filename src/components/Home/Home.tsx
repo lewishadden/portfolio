@@ -3,8 +3,8 @@ import { TypeAnimation } from "react-type-animation";
 import Switch from "react-switch";
 import { Icon } from "@iconify/react";
 
-import GitHubCorner from "../GitHubCorner/GitHubCorner";
-import { githubRepoUrl } from "src/config/global";
+import { GitHubCorner } from "components";
+import { githubRepoUrl } from "config/global";
 import "./Home.scss";
 
 const Header = ({ basicInfo }) => {

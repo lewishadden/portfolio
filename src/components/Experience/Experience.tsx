@@ -2,8 +2,8 @@ import {
   VerticalTimeline,
   VerticalTimelineElement,
 } from "react-vertical-timeline-component";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "react-vertical-timeline-component/style.min.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import TimelineItem from "./TimelineItem/TimelineItem";
 import "./Experience.scss";
