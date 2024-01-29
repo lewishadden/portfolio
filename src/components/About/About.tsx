@@ -1,9 +1,6 @@
 import { Icon } from "@iconify/react";
-import angularIcon from "@iconify/icons-logos/angular-icon";
-import reactIcon from "@iconify/icons-logos/react";
-import vueIcon from "@iconify/icons-logos/vue";
+import { Card } from "react-bootstrap";
 
-import WindowHeader from "../WindowHeader/WindowHeader";
 import "./About.scss";
 
 const About = ({ basicInfo }) => {
@@ -27,25 +24,29 @@ const About = ({ basicInfo }) => {
                 src={profilepic}
                 alt="Avatar placeholder"
               />
-              <Icon
-                icon={angularIcon}
-                style={{ fontSize: "400%", margin: "9% 5% 0 5%" }}
-              />
-              <Icon
-                icon={reactIcon}
-                style={{ fontSize: "400%", margin: "9% 5% 0 5%" }}
-              />
-              <Icon
-                icon={vueIcon}
-                style={{ fontSize: "400%", margin: "9% 5% 0 5%" }}
-              />
+              <div className="col-md-12 about__body__picture-card__tech">
+                <Icon
+                  icon="devicon:angular"
+                  className="about__body__picture-card__tech__icon"
+                />
+                <Icon
+                  icon="devicon:react"
+                  className="about__body__picture-card__tech__icon"
+                />
+                <Icon
+                  icon="devicon:vuejs"
+                  className="about__body__picture-card__tech__icon"
+                />
+              </div>
             </div>
           </div>
           <div className="col-md-8 center about__body__description">
             <div className="col-md-10">
-              <div className="card">
+              <Card>
                 <div className="card-header">
-                  <WindowHeader />
+                  <Icon icon="emojione:red-circle" className="me-3" />
+                  <Icon icon="twemoji:yellow-circle" className="me-3" />
+                  <Icon icon="twemoji:green-circle" className="me-3" />
                 </div>
                 <div
                   className="card-body font-trebuchet text-justify ml-3 mr-3"
@@ -61,7 +62,7 @@ const About = ({ basicInfo }) => {
                   <br />
                   {description}
                 </div>
-              </div>
+              </Card>
             </div>
           </div>
         </div>

@@ -1,7 +1,10 @@
 import { useEffect, useState } from "react";
 import { TypeAnimation } from "react-type-animation";
 import Switch from "react-switch";
+import { Icon } from "@iconify/react";
 
+import GitHubCorner from "../GitHubCorner/GitHubCorner";
+import { githubRepoUrl } from "src/config";
 import "./Home.scss";
 
 const Header = ({ basicInfo }) => {
@@ -42,13 +45,17 @@ const Header = ({ basicInfo }) => {
 
   return (
     <section id="home" className="home">
+      <a
+        href={githubRepoUrl}
+        target="_blank"
+        className="home__github-corner"
+        aria-label="View source on GitHub"
+      >
+        <GitHubCorner />
+      </a>
       <div className="col-md-12">
         <header className="home__header">
-          <span
-            className="iconify home__header__icon"
-            data-icon="la:laptop-code"
-            data-inline="false"
-          ></span>
+          <Icon className="home__header__icon" icon="line-md:document-code" />
           <br />
           <h1 className="mb-0 home__header__name">
             <TypeAnimation

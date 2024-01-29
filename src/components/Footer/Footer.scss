@@ -1,6 +1,17 @@
 .footer {
-}
-.footer {
+  background: #1f1f1f;
+  min-height: 100px;
+  width: 100%;
+  overflow: hidden;
+  font-size: 14px;
+  color: white;
+  position: relative;
+  text-align: center;
+
+  a {
+    color: #fff;
+  }
+
   &__social-links {
     margin-top: 50px;
     font-size: 22px;

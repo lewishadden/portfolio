@@ -7,11 +7,6 @@ html {
   padding: 0;
 }
 
-.styles_typicalWrapper__1_Uvh::after {
-  cursor: none !important;
-  display: none;
-}
-
 .foto img {
   display: block;
   width: 100%;
@@ -192,24 +187,3 @@ html {
     margin-bottom: 30px;
   }
 }
-
-footer {
-  background: #1f1f1f;
-  min-height: 100px;
-  width: 100%;
-  overflow: hidden;
-  font-size: 14px;
-  color: white;
-  position: relative;
-  text-align: center;
-}
-
-footer a,
-footer a:visited {
-  color: #fff;
-}
-
-// footer a:hover,
-// footer a:focus {
-//   color: #fff;
-// }

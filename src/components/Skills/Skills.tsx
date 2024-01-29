@@ -1,3 +1,5 @@
+import { Icon } from "@iconify/react";
+
 import "./Skills.scss";
 
 const Skills = ({ skills, basicInfo }) => {
@@ -5,7 +7,7 @@ const Skills = ({ skills, basicInfo }) => {
 
   const skillTiles = skills?.icons?.map((skill, i) => (
     <li className="list-inline-item mx-3 skills__list__tile" key={i}>
-      <i className={`${skill.class} skills__list__tile__icon`}></i>
+      <Icon icon={skill.class} className="skills__list__tile__icon" />
       <p className="skills__list__tile__name">{skill.name}</p>
     </li>
   ));

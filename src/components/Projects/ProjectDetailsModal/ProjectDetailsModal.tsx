@@ -1,21 +1,24 @@
 import { Modal } from "react-bootstrap";
 import AwesomeSlider from "react-awesome-slider";
+import { Icon } from "@iconify/react";
 
 import "./ProjectDetailsModal.scss";
 
 const ProjectDetailsModal = ({ show, onHide, data }) => {
   const { technologies, images, title, description, url } = data;
 
-  const tech = technologies.map((icons, i) => (
+  const tech = technologies.map((icon, i) => (
     <li
       className="list-inline-item mx-3 project-details__modal__body__skill"
       key={i}
     >
-      <i className={`${icons.class} project-details__modal__body__skill__icon`}>
-        <p className="text-center project-details__modal__body__skill__name">
-          {icons.name}
-        </p>
-      </i>
+      <Icon
+        icon={icon.class}
+        className="project-details__modal__body__skill__icon"
+      />
+      <p className="text-center project-details__modal__body__skill__name">
+        {icon.name}
+      </p>
     </li>
   ));
 
@@ -41,10 +44,10 @@ const ProjectDetailsModal = ({ show, onHide, data }) => {
                 rel="noopener noreferrer"
                 className="link-href"
               >
-                <i
-                  className="fas fa-external-link-alt"
-                  style={{ marginLeft: "10px" }}
-                ></i>
+                <Icon
+                  icon="majesticons:open"
+                  style={{ marginLeft: "10px", fontSize: "2.5rem" }}
+                />
               </a>
             )}
           </Modal.Title>
