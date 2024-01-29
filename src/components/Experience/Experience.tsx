@@ -2,9 +2,10 @@ import {
   VerticalTimeline,
   VerticalTimelineElement,
 } from "react-vertical-timeline-component";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "react-vertical-timeline-component/style.min.css";
-import TimelineItem from "./TimelineItem/TimelineItem";
 
+import TimelineItem from "./TimelineItem/TimelineItem";
 import "./Experience.scss";
 
 const Experience = ({ basicInfo, experience }) => {
@@ -29,7 +30,14 @@ const Experience = ({ basicInfo, experience }) => {
               textAlign: "center",
             }}
             icon={
-              <i className="fas fa-hourglass-start mx-auto timeline-item__icon"></i>
+              <FontAwesomeIcon
+                icon={"hourglass-start"}
+                style={{
+                  width: "30px",
+                  height: "30px",
+                  margin: "-15px 0 0 -15px",
+                }}
+              />
             }
           />
         </VerticalTimeline>

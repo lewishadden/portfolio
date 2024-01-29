@@ -1,7 +1,6 @@
 import { useState } from "react";
 
 import ProjectDetailsModal from "./ProjectDetailsModal/ProjectDetailsModal";
-
 import "./Projects.scss";
 
 const Projects = ({ projects, basicInfo }) => {

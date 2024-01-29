@@ -1,11 +1,17 @@
 import { VerticalTimelineElement } from "react-vertical-timeline-component";
 import Badge from "react-bootstrap/Badge";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faAngular } from "@fortawesome/free-brands-svg-icons/faAngular";
 
 import "./TimelineItem.scss";
 
-const TimelineItem = ({ technologies, mainTech, title, company, years }) => {
+const TimelineItem = ({
+  technologies,
+  mainTech,
+  title,
+  company,
+  years,
+  icon,
+}) => {
   const MainTechBadges = () => (
     <div className="timeline-item__main-badge-container">
       {mainTech.map((technology, i) => (
@@ -40,10 +46,10 @@ const TimelineItem = ({ technologies, mainTech, title, company, years }) => {
       }}
       icon={
         <FontAwesomeIcon
-          icon={faAngular}
+          icon={["fab", icon]}
           style={{
             width: "30px",
-            height: "34px",
+            height: "30px",
             margin: "-15px 0 0 -15px",
           }}
         />
