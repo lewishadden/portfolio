@@ -1,12 +1,14 @@
 import { useState } from "react";
 
-import ProjectDetailsModal from "./ProjectDetailsModal";
+import ProjectDetailsModal from "./ProjectDetailsModal/ProjectDetailsModal";
+
+import "./Projects.scss";
 
 const Projects = ({ projects, basicInfo }) => {
   const [deps, setDeps] = useState(null);
   const [detailsModalShow, setDetailsModalShow] = useState(false);
 
-  var headingText = basicInfo?.sectionName?.projects;
+  var headingText = basicInfo.sectionName.projects;
 
   const showDetailsModal = (data) => {
     setDeps(data);
@@ -19,14 +21,14 @@ const Projects = ({ projects, basicInfo }) => {
   };
 
   var projects =
-    projects?.length > 0 &&
+    projects.length > 0 &&
     projects.map((project) => (
       <div
         className="col-sm-12 col-md-6 col-lg-4"
         key={project.title}
         style={{ cursor: "pointer" }}
       >
-        <span className="portfolio-item d-block">
+        <span className="projects__item d-block">
           <div className="foto" onClick={() => showDetailsModal(project)}>
             <div>
               <img
@@ -39,9 +41,9 @@ const Projects = ({ projects, basicInfo }) => {
                   position: "relative",
                 }}
               />
-              <span className="project-date">{project.startDate}</span>
+              <span className="projects__item__date">{project.startDate}</span>
               <br />
-              <p className="project-title-settings mt-3">{project.title}</p>
+              <p className="projects__item__title mt-3">{project.title}</p>
             </div>
           </div>
         </span>
@@ -49,11 +51,9 @@ const Projects = ({ projects, basicInfo }) => {
     ));
 
   return (
-    <section id="portfolio">
+    <section id="projects" className="projects">
       <div className="col-md-12">
-        <h1 className="section-title" style={{ color: "black" }}>
-          <span>{headingText}</span>
-        </h1>
+        <h2 className="projects__heading">{headingText}</h2>
         <div className="col-md-12 mx-auto">
           <div className="row mx-auto">{projects}</div>
         </div>

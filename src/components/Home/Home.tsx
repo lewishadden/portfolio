@@ -1,30 +1,47 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { TypeAnimation } from "react-type-animation";
 import Switch from "react-switch";
 
 import "./Home.scss";
 
 const Header = ({ basicInfo }) => {
+  const [checked, setChecked] = useState(false);
+
+  useEffect(() => {
+    const theme = checked ? "dark" : "light";
+    document.body.setAttribute("data-theme", theme);
+  }, [checked]);
+
   const { name, titles } = basicInfo;
 
-  const [checked, setChecked] = useState(false);
   const titlesUpperCased = titles.map((x) => [x.toUpperCase(), 1500]).flat();
 
-  const onThemeSwitchChange = (newChecked) => {
-    setChecked(newChecked);
-    setTheme();
-  };
+  const SwitchIcon = (theme) => {
+    let iconClass, marginLeft;
+    if (theme === "light") {
+      iconClass = "noto-v1:sun-with-face";
+      marginLeft = "10px";
+    } else {
+      iconClass = "twemoji:owl";
+      marginLeft = "20px";
+    }
 
-  const setTheme = () => {
-    var dataThemeAttribute = "data-theme";
-    var body = document.body;
-    var newTheme =
-      body.getAttribute(dataThemeAttribute) === "dark" ? "light" : "dark";
-    body.setAttribute(dataThemeAttribute, newTheme);
+    return (
+      <span
+        className={`iconify home__theme-switch ${theme}`}
+        data-icon={iconClass}
+        data-inline="false"
+        style={{
+          height: "100%",
+          fontSize: 25,
+          marginLeft,
+        }}
+      />
+    );
   };
 
   return (
-    <div className="home">
+    <section id="home" className="home">
       <div className="col-md-12">
         <header className="home__header">
           <span
@@ -50,49 +67,20 @@ const Header = ({ basicInfo }) => {
               repeat={Infinity}
             />
           </div>
-          <Switch
-            checked={checked}
-            onChange={onThemeSwitchChange}
-            offColor="#baaa80"
-            onColor="#353535"
-            className="react-switch mx-auto"
-            width={90}
-            height={40}
-            uncheckedIcon={
-              <span
-                className="iconify"
-                data-icon="twemoji:owl"
-                data-inline="false"
-                style={{
-                  display: "block",
-                  height: "100%",
-                  fontSize: 25,
-                  textAlign: "end",
-                  marginLeft: "20px",
-                  color: "#353239",
-                }}
-              ></span>
-            }
-            checkedIcon={
-              <span
-                className="iconify"
-                data-icon="noto-v1:sun-with-face"
-                data-inline="false"
-                style={{
-                  display: "block",
-                  height: "100%",
-                  fontSize: 25,
-                  textAlign: "end",
-                  marginLeft: "10px",
-                  color: "#353239",
-                }}
-              ></span>
-            }
-            id="icon-switch"
-          />
         </header>
+        <Switch
+          checked={checked}
+          onChange={() => setChecked(!checked)}
+          offColor="#baaa80"
+          onColor="#353535"
+          className="mx-auto home__theme-switch"
+          width={90}
+          height={40}
+          uncheckedIcon={SwitchIcon("dark")}
+          checkedIcon={SwitchIcon("light")}
+        />
       </div>
-    </div>
+    </section>
   );
 };
 

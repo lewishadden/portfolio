@@ -1,0 +1,37 @@
+@import "react-awesome-slider/dist/styles.css";
+
+.project-details__modal {
+  &__header {
+    .btn-close {
+      font-size: 2rem;
+      width: 6rem;
+    }
+
+    &__title {
+      padding: 5px 5px 0 5px;
+      font-size: 2rem;
+      font-weight: bold;
+    }
+  }
+
+  &__body {
+    &__image {
+      border: 5px solid #d7caaa;
+    }
+
+    &__description {
+      text-align: justify;
+      padding: 50px 5px 0 5px;
+      margin-bottom: 20px;
+      font-size: 1.5rem;
+    }
+
+    &__skill {
+      font-size: 3.5rem;
+
+      &__name {
+        font-size: 1.5rem;
+      }
+    }
+  }
+}

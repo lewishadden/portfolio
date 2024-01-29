@@ -1,11 +1,11 @@
 import { useState, useEffect } from "react";
 
 import Home from "./components/Home/Home";
+import About from "./components/About/About";
 import Footer from "./components/Footer";
-import About from "./components/About";
-import Experience from "./components/Experience";
-import Projects from "./components/Projects";
-import Skills from "./components/Skills";
+import Experience from "./components/Experience/Experience";
+import Projects from "./components/Projects/Projects";
+import Skills from "./components/Skills/Skills";
 
 import "./App.scss";
 
@@ -30,12 +30,12 @@ const App = () => {
   return (
     (!isLoading && (
       <div>
-        <Home basicInfo={resumeData.basicInfo} />
-        <About basicInfo={resumeData.basicInfo} />
-        <Projects
+        {/* <Home basicInfo={resumeData.basicInfo} /> */}
+        {/* <About basicInfo={resumeData.basicInfo} /> */}
+        {/* <Projects
           projects={resumeData.projects}
           basicInfo={resumeData.basicInfo}
-        />
+        /> */}
         <Skills skills={resumeData.skills} basicInfo={resumeData.basicInfo} />
         <Experience
           experience={resumeData.experience}

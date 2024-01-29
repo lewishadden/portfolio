@@ -1,0 +1,41 @@
+.skills {
+  background: #1f1f1f;
+  min-height: 200px;
+  width: 100%;
+  overflow: hidden;
+  padding-bottom: 10%;
+
+  &__title {
+    padding-top: 5%;
+    padding-bottom: 5%;
+    font: 18px/24px "opensans-bold", sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: #fff;
+    text-align: center;
+  }
+
+  &__list {
+    font-size: 180%;
+    color: white;
+    text-align: center;
+    position: relative;
+
+    &__tile {
+      background-color: transparentize(#f8f5f4, 0.95);
+      padding: 15px 10px 5px 10px;
+      width: 100px;
+      margin: 5px 0 5px 0;
+      border-radius: 8px;
+
+      &__icon {
+        font-size: 4rem;
+      }
+
+      &__name {
+        font-size: 1.3rem;
+        margin-top: 6px;
+      }
+    }
+  }
+}
