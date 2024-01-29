@@ -19,6 +19,14 @@ export default defineConfig({
         find: "config",
         replacement: "/src/config",
       },
+      {
+        find: "icons",
+        replacement: "/src/icons",
+      },
+      {
+        find: "scss",
+        replacement: "/src/scss",
+      },
     ],
   },
 });

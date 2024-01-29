@@ -3,7 +3,8 @@ import { TypeAnimation } from "react-type-animation";
 import Switch from "react-switch";
 import { Icon } from "@iconify/react";
 
-import { GitHubCorner } from "components";
+import { GitHubCornerSVG } from "icons";
+
 import { githubRepoUrl } from "config/global";
 import "./Home.scss";
 
@@ -51,7 +52,7 @@ const Header = ({ basicInfo }) => {
         className="home__github-corner"
         aria-label="View source on GitHub"
       >
-        <GitHubCorner />
+        <GitHubCornerSVG />
       </a>
       <div className="col-md-12">
         <header className="home__header">
