@@ -4,7 +4,7 @@ import Switch from "react-switch";
 import { Icon } from "@iconify/react";
 
 import GitHubCorner from "../GitHubCorner/GitHubCorner";
-import { githubRepoUrl } from "src/config";
+import { githubRepoUrl } from "src/config/global";
 import "./Home.scss";
 
 const Header = ({ basicInfo }) => {
