@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Container, Row, Col } from "react-bootstrap";
+import { Container, Row, Col, Card, Badge } from "react-bootstrap";
 
 import ProjectDetailsModal from "./ProjectDetailsModal/ProjectDetailsModal";
 import "./Projects.scss";
@@ -24,55 +24,54 @@ const Projects = ({ projects, basicInfo }) => {
     projects.length > 0 &&
     projects.map((project) => (
       <Col
-        sm={12}
-        md={6}
-        lg={4}
+        xs={"auto"}
         key={project.title}
         style={{ cursor: "pointer" }}
+        className="projects__item"
       >
-        <span className="projects__item d-block">
-          <div className="foto" onClick={() => showDetailsModal(project)}>
-            <div>
-              <img
-                src={project.images[0]}
-                alt="projectImages"
-                height="auto"
-                style={{
-                  marginBottom: 0,
-                  paddingBottom: 0,
-                  position: "relative",
-                }}
-              />
-              <span className="projects__item__date">{project.startDate}</span>
-              <br />
-              <p className="projects__item__title mt-3">{project.title}</p>
-            </div>
-          </div>
-        </span>
+        <Card
+          text="white"
+          border="secondary"
+          bg="dark"
+          className="projects__item__picture-card"
+          onClick={() => showDetailsModal(project)}
+        >
+          <Card.Img
+            variant="top"
+            className="projects__item__picture-card__image"
+            src={project.images[0]}
+          />
+          <Card.Body>
+            <Card.Title as="h4" className="projects__item__picture-card__title">
+              {project.title}
+            </Card.Title>
+          </Card.Body>
+
+          <Card.ImgOverlay className="projects__item__picture-card__overlay">
+            <Badge bg="dark" className="projects__item__picture-card__date">
+              {project.startDate}
+            </Badge>
+          </Card.ImgOverlay>
+        </Card>
       </Col>
     ));
 
   return (
     <section id="projects" className="projects">
-      <Container fluid>
+      <Container>
         <Row>
           <Col md={12}>
             <h2 className="projects__heading">{headingText}</h2>
           </Col>
         </Row>
-        <Row>
-          <Col xs={12} className="mx-auto">
-            <Row className="mx-auto">{projects}</Row>
-            {/* </Col> */}
-            {deps && (
-              <ProjectDetailsModal
-                show={detailsModalShow}
-                onHide={detailsModalClose}
-                data={deps}
-              />
-            )}
-          </Col>
-        </Row>
+        <Row className="projects__list">{projects}</Row>
+        {deps && (
+          <ProjectDetailsModal
+            show={detailsModalShow}
+            onHide={detailsModalClose}
+            data={deps}
+          />
+        )}
       </Container>
     </section>
   );

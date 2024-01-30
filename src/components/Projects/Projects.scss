@@ -1,12 +1,11 @@
 .projects {
   background: #efe1bd;
-  padding-bottom: 5%;
+  padding: 5% 0;
   -webkit-transition: all ease 0.5s;
   -moz-transition: all ease 0.5s;
   transition: all ease 0.5s;
 
   &__heading {
-    padding-top: 5%;
     padding-bottom: 5%;
     font: 18px/24px "opensans-bold", sans-serif;
     text-transform: uppercase;
@@ -15,37 +14,47 @@
     text-align: center;
   }
 
+  &__list {
+    justify-content: space-between;
+  }
+
   &__item {
     max-width: 100%;
     margin-bottom: 15px;
     text-align: center;
     font-size: 1.5rem;
 
-    &__date {
-      font-size: 16px;
-      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-      padding: 8px 15px 2px 15px;
-      position: relative;
-      z-index: -500;
-      border-top: 5px solid #696969;
-      border-radius: 0 0 5px 5px;
-      background-color: #696969;
-      color: white;
-    }
-
-    &__title {
-      margin-top: 5%;
-      font: 18px/24px "opensans-bold", sans-serif;
-      text-transform: uppercase;
-      letter-spacing: 3px;
-      color: black;
-      text-align: center;
-    }
-  }
-
-  @media (min-width: 576px) {
-    &.portfolio-item {
-      margin-bottom: 30px;
+    &__picture-card {
+      transition: all 0.2s linear;
+      &:hover {
+        -webkit-transform: scale(1.05);
+        -moz-transform: scale(1.05);
+        transform: scale(1.05);
+        z-index: 10;
+        -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.7);
+        -moz-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.7);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.7);
+      }
+      &.card {
+        border-radius: 2rem;
+      }
+      &__image {
+        &.card-img-top {
+          height: 220px;
+          width: fit-content !important;
+          border-top-left-radius: 2rem;
+          border-top-right-radius: 2rem;
+        }
+      }
+      &__title {
+        font: 18px/24px "opensans-bold", sans-serif;
+      }
+      &__date {
+        position: absolute;
+        right: 1.5rem;
+        font-size: 16px;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      }
     }
   }
 }

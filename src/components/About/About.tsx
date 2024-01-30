@@ -1,6 +1,4 @@
-import { Icon } from "@iconify/react";
-import { Card } from "react-bootstrap";
-import { Container, Row, Col } from "react-bootstrap";
+import { Container, Row, Col, Card } from "react-bootstrap";
 
 import "./About.scss";
 
