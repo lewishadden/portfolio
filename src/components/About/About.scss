@@ -1,36 +1,36 @@
 .about {
-  background: #fff;
+  background: #1f1f1f;
+  color: white;
   overflow: hidden;
+  padding: 5% 0;
 
   &__heading {
-    color: black;
-    padding-top: 5%;
     font: 18px/24px "opensans-bold", sans-serif;
     text-transform: uppercase;
     letter-spacing: 3px;
-    text-align: center;
   }
 
   &__body {
+    padding: 5%;
     &__picture-card {
-      background: #ffffff;
-      display: inline-block;
-      margin: 55px 75px 30px;
-      padding: 15px;
-      text-align: center;
-      text-decoration: none;
-      -webkit-box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-      -moz-box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-      -webkit-transition: all 0.2s linear;
-      -moz-transition: all 0.2s linear;
-      transition: all 0.2s linear;
-      z-index: 0;
-      position: relative;
+      background-color: rgba(248, 245, 244, 0.05) !important;
+      -webkit-box-shadow: 0 4px 10px rgba(255, 255, 255, 0.3);
+      -moz-box-shadow: 0 4px 10px rgba(255, 255, 255, 0.3);
+      box-shadow: 0 4px 10px rgba(255, 255, 255, 0.3);
 
       &__image {
-        display: block;
-        max-width: 200px;
+        max-height: 300px;
+        width: auto !important;
+        padding-top: 4rem;
+
+        @media (min-width: 576px) {
+          max-height: 350px;
+        }
+        @media (min-width: 768px) {
+          width: 100% !important;
+          max-height: unset;
+          padding-top: 0;
+        }
       }
 
       &__tech {
@@ -39,7 +39,6 @@
 
         &__icon {
           font-size: 5rem;
-          margin-top: 1.5rem;
         }
       }
     }

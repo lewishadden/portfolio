@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Container, Row, Col } from "react-bootstrap";
 
 import ProjectDetailsModal from "./ProjectDetailsModal/ProjectDetailsModal";
 import "./Projects.scss";
@@ -22,8 +23,10 @@ const Projects = ({ projects, basicInfo }) => {
   var projects =
     projects.length > 0 &&
     projects.map((project) => (
-      <div
-        className="col-sm-12 col-md-6 col-lg-4"
+      <Col
+        sm={12}
+        md={6}
+        lg={4}
         key={project.title}
         style={{ cursor: "pointer" }}
       >
@@ -33,7 +36,7 @@ const Projects = ({ projects, basicInfo }) => {
               <img
                 src={project.images[0]}
                 alt="projectImages"
-                height="230"
+                height="auto"
                 style={{
                   marginBottom: 0,
                   paddingBottom: 0,
@@ -46,24 +49,31 @@ const Projects = ({ projects, basicInfo }) => {
             </div>
           </div>
         </span>
-      </div>
+      </Col>
     ));
 
   return (
     <section id="projects" className="projects">
-      <div className="col-md-12">
-        <h2 className="projects__heading">{headingText}</h2>
-        <div className="col-md-12 mx-auto">
-          <div className="row mx-auto">{projects}</div>
-        </div>
-        {deps && (
-          <ProjectDetailsModal
-            show={detailsModalShow}
-            onHide={detailsModalClose}
-            data={deps}
-          />
-        )}
-      </div>
+      <Container fluid>
+        <Row>
+          <Col md={12}>
+            <h2 className="projects__heading">{headingText}</h2>
+          </Col>
+        </Row>
+        <Row>
+          <Col xs={12} className="mx-auto">
+            <Row className="mx-auto">{projects}</Row>
+            {/* </Col> */}
+            {deps && (
+              <ProjectDetailsModal
+                show={detailsModalShow}
+                onHide={detailsModalClose}
+                data={deps}
+              />
+            )}
+          </Col>
+        </Row>
+      </Container>
     </section>
   );
 };

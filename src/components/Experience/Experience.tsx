@@ -4,6 +4,7 @@ import {
 } from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css";
 import { Icon } from "@iconify/react";
+import { Container, Row, Col } from "react-bootstrap";
 
 import TimelineItem from "./TimelineItem/TimelineItem";
 import "./Experience.scss";
@@ -17,31 +18,37 @@ const Experience = ({ basicInfo, experience }) => {
 
   return (
     <section id="experience" className="experience pb-5">
-      <div className="col-md-12">
-        <h2 className="experience__title">{headingText}</h2>
-      </div>
-      <div className="col-md-8 mx-auto">
-        <VerticalTimeline>
-          {experienceTimelineItems}
-          <VerticalTimelineElement
-            iconStyle={{
-              background: "#AE944F",
-              color: "#fff",
-              textAlign: "center",
-            }}
-            icon={
-              <Icon
-                icon="twemoji:hourglass-done"
-                style={{
-                  width: "40px",
-                  height: "40px",
-                  margin: "-20px 0px 0px -20px",
+      <Container fluid className="text-center">
+        <Row>
+          <Col md={12}>
+            <h2 className="experience__title">{headingText}</h2>
+          </Col>
+        </Row>
+        <Row>
+          <Col md={8} className="mx-auto">
+            <VerticalTimeline>
+              {experienceTimelineItems}
+              <VerticalTimelineElement
+                iconStyle={{
+                  background: "#AE944F",
+                  color: "#fff",
+                  textAlign: "center",
                 }}
+                icon={
+                  <Icon
+                    icon="twemoji:hourglass-done"
+                    style={{
+                      width: "40px",
+                      height: "40px",
+                      margin: "-20px 0px 0px -20px",
+                    }}
+                  />
+                }
               />
-            }
-          />
-        </VerticalTimeline>
-      </div>
+            </VerticalTimeline>
+          </Col>
+        </Row>
+      </Container>
     </section>
   );
 };

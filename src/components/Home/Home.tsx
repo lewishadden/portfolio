@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Container, Row, Col, Stack } from "react-bootstrap";
 import { TypeAnimation } from "react-type-animation";
 import Switch from "react-switch";
 import { Icon } from "@iconify/react";
@@ -54,40 +55,41 @@ const Header = ({ basicInfo }) => {
       >
         <GitHubCornerSVG />
       </a>
-      <div className="col-md-12">
-        <header className="home__header">
-          <Icon className="home__header__icon" icon="line-md:document-code" />
-          <br />
-          <h1 className="mb-0 home__header__name">
-            <TypeAnimation
-              sequence={[name]}
-              wrapper="p"
-              speed={15}
-              cursor={false}
-            />
-          </h1>
-          <div className="home__header__titles">
-            <TypeAnimation
-              sequence={titlesUpperCased}
-              wrapper="span"
-              speed={50}
-              style={{ fontSize: "2.5rem" }}
-              repeat={Infinity}
-            />
-          </div>
-        </header>
-        <Switch
-          checked={checked}
-          onChange={() => setChecked(!checked)}
-          offColor="#baaa80"
-          onColor="#353535"
-          className="mx-auto home__theme-switch"
-          width={90}
-          height={40}
-          uncheckedIcon={SwitchIcon("dark")}
-          checkedIcon={SwitchIcon("light")}
-        />
-      </div>
+      <Container className="d-flex vh-100">
+        <Stack gap={5} className="center">
+          <Stack as="header" gap={2} className="home__header center">
+            <Icon className="home__header__icon" icon="line-md:document-code" />
+            <h1 className="home__header__name">
+              <TypeAnimation
+                sequence={[name]}
+                wrapper="p"
+                speed={15}
+                cursor={false}
+              />
+            </h1>
+            <div className="home__header__titles">
+              <TypeAnimation
+                sequence={titlesUpperCased}
+                wrapper="span"
+                speed={50}
+                style={{ fontSize: "2.5rem" }}
+                repeat={Infinity}
+              />
+            </div>
+          </Stack>
+          <Switch
+            checked={checked}
+            onChange={() => setChecked(!checked)}
+            offColor="#baaa80"
+            onColor="#353535"
+            className="home__theme-switch"
+            width={90}
+            height={40}
+            uncheckedIcon={SwitchIcon("dark")}
+            checkedIcon={SwitchIcon("light")}
+          />
+        </Stack>
+      </Container>
     </section>
   );
 };

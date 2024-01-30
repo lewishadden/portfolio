@@ -1,4 +1,5 @@
 import { Icon } from "@iconify/react";
+import { Container, Row, Col } from "react-bootstrap";
 
 import "./Skills.scss";
 
@@ -14,12 +15,17 @@ const Skills = ({ skills, basicInfo }) => {
 
   return (
     <section id="skills" className="skills">
-      <div className="col-md-12">
-        <h2 className="skills__title">{headingText}</h2>
-        <div className="col-md-12">
-          <ul className="list-inline mx-auto skills__list">{skillTiles}</ul>
-        </div>
-      </div>
+      <Container>
+        <Row>
+          <Col md={12}>
+            <h2 className="skills__title">{headingText}</h2>
+            <Col md={12}>
+              <ul className="list-inline mx-auto skills__list">{skillTiles}</ul>
+            </Col>
+          </Col>
+          §
+        </Row>
+      </Container>
     </section>
   );
 };

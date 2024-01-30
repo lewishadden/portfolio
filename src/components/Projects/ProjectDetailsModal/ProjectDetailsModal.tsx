@@ -1,5 +1,6 @@
 import { Modal } from "react-bootstrap";
 import AwesomeSlider from "react-awesome-slider";
+import { Row, Col } from "react-bootstrap";
 import { Icon } from "@iconify/react";
 
 import "./ProjectDetailsModal.scss";
@@ -33,8 +34,8 @@ const ProjectDetailsModal = ({ show, onHide, data }) => {
       className="project-details__modal"
     >
       <Modal.Header closeButton className="project-details__modal__header">
-        <div className="col-md-1" />
-        <div className="col-md-9">
+        <Col md={1} />
+        <Col md={9}>
           <Modal.Title className="project-details__modal__header__title">
             {title}
             {url && (
@@ -51,12 +52,12 @@ const ProjectDetailsModal = ({ show, onHide, data }) => {
               </a>
             )}
           </Modal.Title>
-        </div>
+        </Col>
       </Modal.Header>
 
       <Modal.Body className="project-details__modal__body">
-        <div className="col-md-12">
-          <div className="col-md-10 mx-auto">
+        <Col md={12}>
+          <Col md={10} className="mx-auto">
             <AwesomeSlider
               animation="scaleOutAnimation"
               className="project-details__modal__body__image"
@@ -66,11 +67,11 @@ const ProjectDetailsModal = ({ show, onHide, data }) => {
             <p className="project-details__modal__body__description">
               {description}
             </p>
-            <div className="col-md-12 text-center">
+            <Col md={12} className="text-center">
               <ul className="list-inline mx-auto">{tech}</ul>
-            </div>
-          </div>
-        </div>
+            </Col>
+          </Col>
+        </Col>
       </Modal.Body>
     </Modal>
   );
