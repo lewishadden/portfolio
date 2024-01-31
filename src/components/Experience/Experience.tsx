@@ -17,15 +17,15 @@ const Experience = ({ basicInfo, experience }) => {
   ));
 
   return (
-    <section id="experience" className="experience pb-5">
-      <Container fluid className="text-center">
+    <section id="experience" className="experience">
+      <Container>
         <Row>
           <Col md={12}>
             <h2 className="experience__title">{headingText}</h2>
           </Col>
         </Row>
         <Row>
-          <Col md={8} className="mx-auto">
+          <Col md={12} className="mx-auto">
             <VerticalTimeline>
               {experienceTimelineItems}
               <VerticalTimelineElement

@@ -23,7 +23,6 @@ const Skills = ({ skills, basicInfo }) => {
               <ul className="list-inline mx-auto skills__list">{skillTiles}</ul>
             </Col>
           </Col>
-          §
         </Row>
       </Container>
     </section>

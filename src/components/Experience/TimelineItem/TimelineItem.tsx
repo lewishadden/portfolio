@@ -15,7 +15,12 @@ const TimelineItem = ({
   const MainTechBadges = () => (
     <div className="timeline-item__main-badge-container">
       {mainTech.map((technology, i) => (
-        <Badge pill className="timeline-item__main-badge me-2 mb-2" key={i}>
+        <Badge
+          pill
+          bg="secondary"
+          className="timeline-item__main-badge me-2 mb-2"
+          key={i}
+        >
           {technology}
         </Badge>
       ))}
@@ -29,6 +34,7 @@ const TimelineItem = ({
           pill
           className="timeline-item__experience-badge me-2 mb-2"
           key={i}
+          bg="secondary"
         >
           {technology}
         </Badge>
