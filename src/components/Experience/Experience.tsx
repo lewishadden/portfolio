@@ -30,7 +30,7 @@ const Experience = ({ basicInfo, experience }) => {
               {experienceTimelineItems}
               <VerticalTimelineElement
                 iconStyle={{
-                  background: "#AE944F",
+                  background: "rgb(63 63 63)",
                   color: "#fff",
                   textAlign: "center",
                 }}

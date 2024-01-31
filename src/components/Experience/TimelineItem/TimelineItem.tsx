@@ -47,7 +47,7 @@ const TimelineItem = ({
       className="vertical-timeline-element--work timeline-item"
       date={years}
       iconStyle={{
-        background: "#AE944F",
+        background: "rgb(63 63 63)",
         color: "#fff",
       }}
       icon={
