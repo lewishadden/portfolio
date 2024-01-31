@@ -8,6 +8,16 @@ html {
   padding: 0;
 }
 
+section {
+  overflow: hidden;
+  padding: 5% 0;
+  color: white;
+  background: #222222;
+  &:nth-child(odd) {
+    background: #191919;
+  }
+}
+
 .center {
   display: flex;
   justify-content: center;
