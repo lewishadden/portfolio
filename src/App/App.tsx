@@ -27,15 +27,16 @@ const App = () => {
       <>
         <Home basicInfo={resumeData.basicInfo} />
         <About basicInfo={resumeData.basicInfo} />
+        <Experience
+          experience={resumeData.experience}
+          basicInfo={resumeData.basicInfo}
+        />
         <Projects
           projects={resumeData.projects}
           basicInfo={resumeData.basicInfo}
         />
         <Skills skills={resumeData.skills} basicInfo={resumeData.basicInfo} />
-        <Experience
-          experience={resumeData.experience}
-          basicInfo={resumeData.basicInfo}
-        />
+
         <Footer basicInfo={resumeData.basicInfo} />
       </>
     )) ||

@@ -13,12 +13,12 @@ const TimelineItem = ({
   icon,
 }) => {
   const MainTechBadges = () => (
-    <div className="timeline-item__main-badge-container">
+    <div className="timeline__item__main-badge-container">
       {mainTech.map((technology, i) => (
         <Badge
           pill
           bg="secondary"
-          className="timeline-item__main-badge me-2 mb-2"
+          className="timeline__item__main-badge me-2 mb-2"
           key={i}
         >
           {technology}
@@ -28,11 +28,11 @@ const TimelineItem = ({
   );
 
   const ExtraTechBadges = () => (
-    <div className="timeline-item__extra-badge-container">
+    <div className="timeline__item__extra-badge-container">
       {technologies.map((technology, i) => (
         <Badge
           pill
-          className="timeline-item__experience-badge me-2 mb-2"
+          className="timeline__item__extra-badge me-2 mb-2"
           key={i}
           bg="secondary"
         >
@@ -44,7 +44,7 @@ const TimelineItem = ({
 
   return (
     <VerticalTimelineElement
-      className="vertical-timeline-element--work timeline-item"
+      className="timeline__item"
       date={years}
       iconStyle={{
         background: "rgb(63 63 63)",

@@ -26,9 +26,10 @@ const Experience = ({ basicInfo, experience }) => {
         </Row>
         <Row>
           <Col md={12} className="mx-auto">
-            <VerticalTimeline>
+            <VerticalTimeline className="timeline">
               {experienceTimelineItems}
               <VerticalTimelineElement
+                className="timeline__item start"
                 iconStyle={{
                   background: "rgb(63 63 63)",
                   color: "#fff",

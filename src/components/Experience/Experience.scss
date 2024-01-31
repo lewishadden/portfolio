@@ -7,10 +7,17 @@
     text-align: center;
   }
 
-  .vertical-timeline-element-content {
-    background-color: rgb(63 63 63);
-  }
-  .vertical-timeline-element-content-arrow {
-    border-right-color: #636363;
+  .timeline {
+    &__item {
+      &:not(.start) {
+        .vertical-timeline-element-content {
+          background-color: rgb(63 63 63);
+          box-shadow: 0 3px 0 #757575;
+        }
+        .vertical-timeline-element-content-arrow {
+          border-right-color: #636363;
+        }
+      }
+    }
   }
 }
