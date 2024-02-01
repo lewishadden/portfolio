@@ -1,3 +1,4 @@
+import { useState, useRef, useEffect } from "react";
 import AwesomeSlider from "react-awesome-slider";
 import { Col, Modal } from "react-bootstrap";
 import { Icon } from "@iconify/react";
@@ -5,7 +6,27 @@ import { Icon } from "@iconify/react";
 import "./ProjectDetailsModal.scss";
 
 const ProjectDetailsModal = ({ show, onHide, data }) => {
+  const [paddingHeight, setPaddingHeight] = useState(100);
   const { technologies, images, title, description, url } = data;
+
+  const imgRefs = Array.from(images, () => useRef(null));
+
+  useEffect(() => {}, [...imgRefs]);
+
+  const imageSlides = images.map((elem, i) => (
+    <div key={i}>
+      <img
+        ref={imgRefs[i]}
+        src={elem}
+        className="project-details__modal__body__images__img"
+        onLoad={(e) => {
+          const { offsetWidth, offsetHeight } = e.target;
+          const newPaddingHeight = (offsetHeight / offsetWidth) * 100;
+          setPaddingHeight(newPaddingHeight);
+        }}
+      ></img>
+    </div>
+  ));
 
   const tech = technologies.map((icon, i) => (
     <li
@@ -21,8 +42,6 @@ const ProjectDetailsModal = ({ show, onHide, data }) => {
       </p>
     </li>
   ));
-
-  const img = images.map((elem, i) => <div key={i} data-src={elem} />);
 
   return (
     <Modal
@@ -66,16 +85,19 @@ const ProjectDetailsModal = ({ show, onHide, data }) => {
           <Col md={10} className="mx-auto">
             <AwesomeSlider
               animation="cubeAnimation"
-              className="project-details__modal__body__image"
+              className="project-details__modal__body__images"
+              style={{ "--slider-height-percentage": `${paddingHeight}%` }}
             >
-              {img}
+              {imageSlides}
             </AwesomeSlider>
-            <p className="project-details__modal__body__description">
-              {description}
-            </p>
-            <Col md={12} className="text-center">
-              <ul className="list-inline mx-auto">{tech}</ul>
-            </Col>
+          </Col>
+        </Col>
+        <Col md={12}>
+          <p className="project-details__modal__body__description">
+            {description}
+          </p>
+          <Col md={12} className="text-center">
+            <ul className="list-inline mx-auto">{tech}</ul>
           </Col>
         </Col>
       </Modal.Body>

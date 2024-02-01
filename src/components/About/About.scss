@@ -1,6 +1,5 @@
 .about {
   &__heading {
-    font: 18px/24px "opensans-bold", sans-serif;
     text-transform: uppercase;
     letter-spacing: 3px;
   }
@@ -12,6 +11,14 @@
       -webkit-box-shadow: 0 4px 10px rgba(255, 255, 255, 0.3);
       -moz-box-shadow: 0 4px 10px rgba(255, 255, 255, 0.3);
       box-shadow: 0 4px 10px rgba(255, 255, 255, 0.3);
+
+      &__title {
+        font-size: 2.5rem;
+      }
+
+      &__description {
+        font-size: 1.2rem;
+      }
 
       &__image {
         max-height: 300px;
@@ -33,7 +40,7 @@
         justify-content: space-evenly;
 
         &__icon {
-          font-size: 5rem;
+          // font-size: 5rem;
         }
       }
     }

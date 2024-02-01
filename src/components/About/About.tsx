@@ -36,17 +36,21 @@ const About = ({ basicInfo }) => {
                     className="font-trebuchet text-start text-justify ms-3 me-3"
                     style={{
                       height: "auto",
-                      fontSize: "132%",
                       lineHeight: "200%",
                     }}
                   >
-                    <br />
-                    <Card.Title>
-                      <span className="wave">{descriptionHeader} :) </span>
-                    </Card.Title>
-                    <br />
-                    <Card.Text>{description}</Card.Text>
-                    <br />
+                    <Card.Title
+                      dangerouslySetInnerHTML={{ __html: descriptionHeader }}
+                      className="about__body__picture-card__title mb-3"
+                      as="h4"
+                    />
+                    {/* <br /> */}
+                    <Card.Text
+                      dangerouslySetInnerHTML={{ __html: description }}
+                      className="about__body__picture-card__description"
+                      as="p"
+                    />
+                    {/* <br /> */}
                     {/* <Row className="about__body__picture-card__tech">
                       <Col className="mb-3">
                         <Icon

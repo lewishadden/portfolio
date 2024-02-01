@@ -5,10 +5,13 @@
   padding: 0;
 
   &__header {
-    h1 {
-      font-size: 4rem;
+    &__name {
       font-weight: 600 !important;
-      font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+      font-size: 3rem;
+    }
+
+    &__titles {
+      font-size: 2rem;
     }
 
     &__icon {
