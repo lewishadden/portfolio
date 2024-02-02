@@ -240,12 +240,12 @@
     "icons": [
       {
         "name": "HTML 5",
-        "class": "html5",
+        "class": "devicon-plain:html5",
         "level": "95"
       },
       {
         "name": "CSS 3",
-        "class": "css3-alt",
+        "class": "devicon-plain:css3",
         "level": "95"
       },
       {
@@ -277,6 +277,26 @@
         "name": "Flutter",
         "class": "devicon-plain:csharp",
         "level": "65"
+      },
+      {
+        "name": "MySql",
+        "class": "devicon-plain:mysql",
+        "level": "60"
+      },
+      {
+        "name": "MySql",
+        "class": "devicon-plain:mysql",
+        "level": "60"
+      },
+      {
+        "name": "MySql",
+        "class": "devicon-plain:mysql",
+        "level": "60"
+      },
+      {
+        "name": "MySql",
+        "class": "devicon-plain:mysql",
+        "level": "60"
       },
       {
         "name": "MySql",
