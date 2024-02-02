@@ -34,13 +34,19 @@
       "title": "Audi Form Builder",
       "startDate": "2021",
       "description": "Built a technical capability that enabled content editors to seamlessly create new custom forms on the Audi website wthout any new code. It allows them to drag-and-drop any number of React micro-frontends onto a new page, and it just works. I was responsible for architecting the solution and leading the development team through the entire project from start to finish. The Audi site now has 4 forms that were created with Audi Form Builder",
+      "theme": {
+        "text": "light",
+        "border": "light",
+        "background": "dark"
+      },
+      "thumbnail": "simple-icons:googleforms",
       "images": [
-        "images/projects/afb/AU.png",
         "images/projects/afb/BATD.png",
+        "images/projects/afb/AU.png",
         "images/projects/afb/RAC.png",
         "images/projects/afb/RYI.png"
       ],
-      "url": "",
+      "url": "https://www.audi.co.uk/uk/web/en/call-me-back.html",
       "technologies": [
         {
           "class": "devicon:react",
@@ -57,46 +63,60 @@
       ]
     },
     {
-      "title": "Photography",
+      "title": "Cookie Control",
       "startDate": "2018",
-      "description": "Personal project for study subject. I was responsible for testing photography application that optimizes images with popular algorithms used by graphic editors like Pixlr or Adobe Photoshop. I've earned A grade :)",
+      "description": "Single-handedly architected and implemented the entire Cookie Control tool acros the whole Audi UK website, ensuring GDPR compliance. I created rules and JavaScript tags in Adobe Launch to control the firing of 3rd party tracking tags and custom analytics based on users preferences.",
+      "theme": {
+        "text": "light",
+        "border": "light",
+        "background": "dark"
+      },
+      "thumbnail": "emojione-monotone:cookie",
       "images": [
-        "images/portfolio/photography/p1.jpg",
-        "images/portfolio/photography/p2.jpg"
+        "images/projects/cookies/popup-small.png",
+        "images/projects/cookies/popup-banner.png",
+        "images/projects/cookies/side-nav.png"
       ],
-      "url": "https://github.com",
+      "url": "",
+      "technologies": [
+        {
+          "class": "devicon:javascript",
+          "name": "JavaScript"
+        },
+        {
+          "class": "arcticons:adobe-analytics",
+          "name": "Adobe Analytics"
+        },
+        {
+          "class": "emojione:cookie",
+          "name": "Cookies"
+        }
+      ]
+    },
+    {
+      "title": "Audi Digital Transformation",
+      "startDate": "2018",
+      "description": "Completely transformed and modernised the technology powering Audi UK. From migrating their legacy tech stack onto AWS, to completely overhauling their entire website. In the 5 years that I worked on the Audi project, I played a crucial role in the development and technical innovation of their new infrastructure and cutting-edge web apps. I spent most of my time leading Front End development teams creating new SPA's and cutting-edge technical capabilities, before moving into Full Stack development. I learned a lot along the way and I can confidently say that this has been one of my favourite projects in my professional career",
+      "thumbnail": "cbi:audi",
+      "images": ["images/projects/spa/OSB.png", "images/projects/spa/PX.png"],
+      "theme": {
+        "text": "light",
+        "border": "light",
+        "background": "dark"
+      },
+      "url": "",
       "technologies": [
         {
           "class": "devicon:react",
           "name": "React"
         },
         {
-          "class": "devicon-plain:javascript",
-          "name": "JavaScript"
-        }
-      ]
-    },
-    {
-      "title": "3D Object Viewer",
-      "startDate": "2015",
-      "description": "One of the first apps I was working on my internship. I had to develop front-end implementation for app that shows 3D models of known buildings. This was also my first project in Angular framework. I've learned a lot!",
-      "images": [
-        "images/portfolio/adventure/p1.jpg",
-        "images/portfolio/adventure/p2.jpg"
-      ],
-      "url": "https://github.com",
-      "technologies": [
-        {
-          "class": "devicon-plain:angularjs",
-          "name": "Angular"
-        },
-        {
-          "class": "devicon-plain:typescript",
+          "class": "devicon:typescript",
           "name": "TypeScript"
         },
         {
-          "class": "devicon-plain:csharp",
-          "name": "C#"
+          "class": "logos:aws",
+          "name": "AWS"
         }
       ]
     }

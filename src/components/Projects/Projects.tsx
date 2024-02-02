@@ -1,5 +1,6 @@
 import { useState } from "react";
-import { Container, Row, Col, Card, Badge } from "react-bootstrap";
+import { Container, Row, Col, Stack, Card, Badge } from "react-bootstrap";
+import { Icon } from "@iconify/react";
 
 import ProjectDetailsModal from "./ProjectDetailsModal/ProjectDetailsModal";
 import "./Projects.scss";
@@ -23,35 +24,36 @@ const Projects = ({ projects, basicInfo }) => {
   var projects =
     projects.length > 0 &&
     projects.map((project) => (
-      <Col
-        xs={"auto"}
-        key={project.title}
-        style={{ cursor: "pointer" }}
-        className="projects__item"
-      >
+      <Col key={project.title} className="projects__item my-3 px-3">
         <Card
-          text="white"
-          border="secondary"
-          bg="dark"
-          className="projects__item__picture-card"
+          text={project.theme.text}
+          border={project.theme.border}
+          bg={project.theme.background}
+          className="projects__item__picture-card mx-auto"
           onClick={() => showDetailsModal(project)}
         >
-          <Card.Img
-            variant="top"
-            className="projects__item__picture-card__image"
-            src={project.images[0]}
-          />
           <Card.Body>
-            <Card.Title as="h4" className="projects__item__picture-card__title">
-              {project.title}
-            </Card.Title>
-          </Card.Body>
+            <Stack gap={3} className="justify-content-between h-100">
+              <Badge
+                bg={"secondary"}
+                text={project.theme.text}
+                className="projects__item__picture-card__date ms-auto"
+              >
+                {project.startDate}
+              </Badge>
+              <Icon
+                icon={project.thumbnail}
+                className="projects__item__picture-card__thumbnail mx-auto"
+              />
 
-          <Card.ImgOverlay className="projects__item__picture-card__overlay">
-            <Badge bg="dark" className="projects__item__picture-card__date">
-              {project.startDate}
-            </Badge>
-          </Card.ImgOverlay>
+              <Card.Title
+                as="h4"
+                className="projects__item__picture-card__title font-trebuchet"
+              >
+                {project.title}
+              </Card.Title>
+            </Stack>
+          </Card.Body>
         </Card>
       </Col>
     ));
@@ -64,7 +66,9 @@ const Projects = ({ projects, basicInfo }) => {
             <h2 className="projects__heading">{headingText}</h2>
           </Col>
         </Row>
-        <Row className="projects__list">{projects}</Row>
+        <Row xs={1} sm={1} md={2} lg={2} xl={3} className="projects__list">
+          {projects}
+        </Row>
         {deps && (
           <ProjectDetailsModal
             show={detailsModalShow}

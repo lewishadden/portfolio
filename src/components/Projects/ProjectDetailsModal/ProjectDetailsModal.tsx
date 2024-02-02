@@ -90,15 +90,13 @@ const ProjectDetailsModal = ({ show, onHide, data }) => {
             >
               {imageSlides}
             </AwesomeSlider>
+            <p className="project-details__modal__body__description">
+              {description}
+            </p>
           </Col>
         </Col>
-        <Col md={12}>
-          <p className="project-details__modal__body__description">
-            {description}
-          </p>
-          <Col md={12} className="text-center">
-            <ul className="list-inline mx-auto">{tech}</ul>
-          </Col>
+        <Col md={12} className="text-center">
+          <ul className="list-inline mx-auto">{tech}</ul>
         </Col>
       </Modal.Body>
     </Modal>
