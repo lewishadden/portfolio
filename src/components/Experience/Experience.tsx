@@ -38,11 +38,7 @@ const Experience = ({ basicInfo, experience }) => {
                 icon={
                   <Icon
                     icon="twemoji:hourglass-done"
-                    style={{
-                      width: "40px",
-                      height: "40px",
-                      margin: "-20px 0px 0px -20px",
-                    }}
+                    className="timeline__item__icon"
                   />
                 }
               />

@@ -50,16 +50,7 @@ const TimelineItem = ({
         background: "rgb(63 63 63)",
         color: "#fff",
       }}
-      icon={
-        <Icon
-          icon={icon}
-          style={{
-            width: "40px",
-            height: "40px",
-            margin: "-20px 0px 0px -20px",
-          }}
-        />
-      }
+      icon={<Icon icon={icon} className="timeline__item__icon" />}
     >
       <MainTechBadges />
       <h3 className="vertical-timeline-element-title">{title}</h3>

@@ -66,7 +66,14 @@ const Projects = ({ projects, basicInfo }) => {
             <h2 className="projects__heading">{headingText}</h2>
           </Col>
         </Row>
-        <Row xs={1} sm={1} md={2} lg={2} xl={3} className="projects__list">
+        <Row
+          xs={1}
+          sm={1}
+          md={2}
+          lg={2}
+          xl={3}
+          className="projects__list center"
+        >
           {projects}
         </Row>
         {deps && (

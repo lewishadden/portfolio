@@ -123,30 +123,117 @@
   ],
   "experience": [
     {
-      "company": "DefOpenSource",
-      "title": "Front-End Developer",
-      "years": "10.2019 - present",
-      "mainTech": ["Angular 8/9/10"],
-      "icon": "devicon:angular",
+      "company": "Sopra Steria",
+      "title": "Cloud Infrastructure Architect",
+      "years": "Jun 2023 – Dec 2023",
+      "mainTech": ["Azure"],
+      "icon": "devicon:azure",
       "technologies": [
         "REST API",
-        "RxJS",
-        "JavaScript",
-        "Bootstrap",
-        "MDBootstrap",
-        "EF Core",
-        ".NET Core",
-        "SignalR",
-        "Angular Material"
+        "Cosmos DB",
+        "Serverless Function",
+        "Content Delivery Network",
+        "Blob Storage"
       ]
     },
     {
-      "company": "Serros Solutions",
-      "title": "Intern",
-      "years": "01.2018 - 09.2019",
-      "mainTech": ["Angular 7/8"],
+      "company": "Sopra Steria",
+      "title": "Lead Software Engineer",
+      "years": "Aug 2022 - Apr 2023",
+      "mainTech": ["Angular 8+", "React", "Flutter", "TypeScript"],
+      "icon": "devicon:angularjs",
+      "technologies": [
+        "Node.js",
+        "HTML5",
+        "SCSS / CSS3",
+        "Jest",
+        "PowerBI",
+        "Split Tunneling (VPN)"
+      ]
+    },
+    {
+      "company": "IBM",
+      "title": "Senior Full Stack Developer",
+      "years": "Jan 2022 - Jul 2022",
+      "mainTech": ["React", "Redux", "TypeScript", "AWS"],
       "icon": "devicon:react",
-      "technologies": ["RxJS", "Django", "PHP", "JavaScript", "DHTMLX Gantt"]
+      "technologies": [
+        "JavaScript",
+        "Node.js",
+        "Carbon Design System",
+        "HTML5",
+        "SCSS / CSS3",
+        "Jest + Enzyme",
+        "CloudFormation",
+        "DynamoDB",
+        "CodeCommit",
+        "CodeBuild",
+        "CodePipeline",
+        "Lambda",
+        "EC2",
+        "S3",
+        "API Gateway",
+        "IAM",
+        "JIRA"
+      ]
+    },
+    {
+      "company": "IBM",
+      "title": "Lead Front End Developer",
+      "years": "Jan 2021 - Jan 2022",
+      "mainTech": ["React", "Redux", "TypeScript", "AWS"],
+      "icon": "devicon:react",
+      "technologies": [
+        "HTML5",
+        "SCSS / CSS3",
+        "Jest + Enzyme",
+        "Micro-Frontends",
+        "Carbon Design System",
+        "FeatureHub",
+        "GitHub Workflows",
+        "Adobe Experience Manager",
+        "Adobe Launch",
+        "JIRA"
+      ]
+    },
+    {
+      "company": "IBM",
+      "title": "Front End Developer",
+      "years": "Aug 2018 - Jan 2021",
+      "mainTech": ["React", "Redux", "TypeScript", "Adobe Experience Manager"],
+      "icon": "devicon:react",
+      "technologies": [
+        "JavaScript",
+        "Webpack",
+        "Babel",
+        "HTML5",
+        "SCSS / CSS3",
+        "Jest + Enzyme",
+        "Carbon Design System",
+        "Adobe Dynamic Tag Manager",
+        "Cookie Control (CIVIC)",
+        "Docker",
+        "Linux / Bash",
+        "Apache",
+        "AWS"
+      ]
+    },
+    {
+      "company": "IBM",
+      "title": "QA Tester",
+      "years": "Jan 2018 - Aug 2018",
+      "mainTech": ["Selenium", "WebdriverIO", "Cucumber / Gherkin"],
+      "icon": "skill-icons:selenium",
+      "technologies": [
+        "BrowserStack",
+        "Appium",
+        "Node.js",
+        "JIRA",
+        "React",
+        "JavaScript",
+        "HTML",
+        "CSS"
+      ]
     }
   ],
   "skills": {
@@ -187,7 +274,7 @@
         "level": "85"
       },
       {
-        "name": "C#",
+        "name": "Flutter",
         "class": "devicon-plain:csharp",
         "level": "65"
       },

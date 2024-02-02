@@ -1,7 +1,6 @@
 .experience {
   &__title {
     padding-bottom: 5%;
-    font: 18px/24px "opensans-bold", sans-serif;
     text-transform: uppercase;
     letter-spacing: 3px;
     text-align: center;
@@ -17,6 +16,12 @@
         .vertical-timeline-element-content-arrow {
           border-right-color: #636363;
         }
+      }
+
+      &__icon {
+        width: 36px;
+        height: 36px;
+        margin: -18px 0px 0px -18px;
       }
     }
   }
