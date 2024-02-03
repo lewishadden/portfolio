@@ -4,7 +4,7 @@
 section {
   overflow: hidden;
   padding: 5% 0;
-  color: #d2d2d2;
+  color: #ffffff;
   background: #222222;
   &:nth-child(odd) {
     background: #191919;
@@ -58,9 +58,9 @@ section {
     "Lucida Sans", Arial, sans-serif;
 }
 
-.vertical-timeline-element-date {
-  padding: 0 !important;
-  margin: 0 !important;
+.bg-darkgrey {
+  background-color: #585858;
+  border: 1px solid #6e6e6e;
 }
 
 .bars {

@@ -10,11 +10,13 @@
     &__item {
       &:not(.start) {
         .vertical-timeline-element-content {
-          background-color: rgb(63 63 63);
+          border: 1px solid #757575;
+          border-radius: 0.5rem;
+          background: #252525;
           box-shadow: 0 3px 0 #757575;
         }
         .vertical-timeline-element-content-arrow {
-          border-right-color: #636363;
+          border-right-color: #757575;
         }
       }
 

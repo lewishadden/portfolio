@@ -53,11 +53,11 @@
           "name": "React"
         },
         {
-          "class": "devicon-plain:typescript",
+          "class": "devicon:typescript",
           "name": "TypeScript"
         },
         {
-          "class": "simple-icons:redux",
+          "class": "devicon:redux",
           "name": "Redux"
         }
       ]

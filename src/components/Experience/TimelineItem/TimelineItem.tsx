@@ -16,9 +16,8 @@ const TimelineItem = ({
     <div className="timeline__item__main-badge-container">
       {mainTech.map((technology, i) => (
         <Badge
-          pill
-          bg="secondary"
-          className="timeline__item__main-badge me-2 mb-2"
+          bg="darkgrey"
+          className="timeline__item__badge main font-trebuchet me-2 mb-2"
           key={i}
         >
           {technology}
@@ -31,10 +30,9 @@ const TimelineItem = ({
     <div className="timeline__item__extra-badge-container">
       {technologies.map((technology, i) => (
         <Badge
-          pill
-          className="timeline__item__extra-badge me-2 mb-2"
+          className="timeline__item__badge extra font-trebuchet me-2 mb-2"
           key={i}
-          bg="secondary"
+          bg="darkgrey"
         >
           {technology}
         </Badge>

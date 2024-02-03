@@ -3,25 +3,13 @@
     margin-top: 15px;
   }
 
-  &__main-badge {
-    font-size: 13px !important;
+  &__badge {
+    font-size: 1rem !important;
     text-align: left !important;
     padding: 5px 8px 5px 8px !important;
     vertical-align: baseline;
-    background-color: #ae944f !important;
-    color: white;
-    font-weight: lighter !important;
-    font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
-  }
-
-  &__extra-badge {
-    font-size: 11px !important;
-    text-align: left !important;
-    padding: 5px 8px 5px 8px !important;
-    vertical-align: baseline;
-    background-color: #f9f5e9 !important;
-    color: black;
-    font-weight: lighter !important;
-    font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+    &.extra {
+      font-weight: lighter !important;
+    }
   }
 }
