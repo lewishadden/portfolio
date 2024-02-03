@@ -1,4 +1,4 @@
-import { useState, useRef, useEffect } from "react";
+import { useState } from "react";
 import AwesomeSlider from "react-awesome-slider";
 import { Col, Modal } from "react-bootstrap";
 import { Icon } from "@iconify/react";
@@ -9,39 +9,48 @@ const ProjectDetailsModal = ({ show, onHide, data }) => {
   const [paddingHeight, setPaddingHeight] = useState(100);
   const { technologies, images, title, description, url } = data;
 
-  const imgRefs = Array.from(images, () => useRef(null));
-
-  useEffect(() => {}, [...imgRefs]);
-
-  const imageSlides = images.map((elem, i) => (
-    <div key={i}>
-      <img
-        ref={imgRefs[i]}
-        src={elem}
-        className="project-details__modal__body__images__img"
-        onLoad={(e) => {
-          const { offsetWidth, offsetHeight } = e.target;
-          const newPaddingHeight = (offsetHeight / offsetWidth) * 100;
-          setPaddingHeight(newPaddingHeight);
-        }}
-      ></img>
+  const getImageSlides = () => (
+    <div className="project-details__modal__body__image-container">
+      <AwesomeSlider
+        animation="cubeAnimation"
+        className="project-details__modal__body__image-container__slider"
+        style={{ "--slider-height-percentage": `${paddingHeight}%` }}
+      >
+        {images.map((elem, i) => (
+          <div key={i}>
+            <img
+              src={elem}
+              className="project-details__modal__body__image-container__img"
+              onLoad={(e) => {
+                const { offsetWidth, offsetHeight } = e.target;
+                const newPaddingHeight = (offsetHeight / offsetWidth) * 100;
+                setPaddingHeight(newPaddingHeight);
+              }}
+            />
+          </div>
+        ))}
+      </AwesomeSlider>
     </div>
-  ));
+  );
 
-  const tech = technologies.map((icon, i) => (
-    <li
-      className="list-inline-item mx-3 project-details__modal__body__skill"
-      key={i}
-    >
-      <Icon
-        icon={icon.class}
-        className="project-details__modal__body__skill__icon"
-      />
-      <p className="text-center project-details__modal__body__skill__name">
-        {icon.name}
-      </p>
-    </li>
-  ));
+  const TechIcons = () => (
+    <ul className="list-inline mx-auto">
+      {technologies.map((icon, i) => (
+        <li
+          className="list-inline-item mx-3 project-details__modal__body__skill"
+          key={i}
+        >
+          <Icon
+            icon={icon.class}
+            className="project-details__modal__body__skill__icon"
+          />
+          <p className="text-center project-details__modal__body__skill__name">
+            {icon.name}
+          </p>
+        </li>
+      ))}
+    </ul>
+  );
 
   return (
     <Modal
@@ -83,20 +92,14 @@ const ProjectDetailsModal = ({ show, onHide, data }) => {
       <Modal.Body className="project-details__modal__body">
         <Col md={12}>
           <Col md={10} className="mx-auto">
-            <AwesomeSlider
-              animation="cubeAnimation"
-              className="project-details__modal__body__images"
-              style={{ "--slider-height-percentage": `${paddingHeight}%` }}
-            >
-              {imageSlides}
-            </AwesomeSlider>
+            {images.length > 0 && getImageSlides()}
             <p className="project-details__modal__body__description">
               {description}
             </p>
           </Col>
         </Col>
         <Col md={12} className="text-center">
-          <ul className="list-inline mx-auto">{tech}</ul>
+          <TechIcons />
         </Col>
       </Modal.Body>
     </Modal>

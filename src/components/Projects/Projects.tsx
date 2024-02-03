@@ -9,20 +9,19 @@ const Projects = ({ projects, basicInfo }) => {
   const [deps, setDeps] = useState(null);
   const [detailsModalShow, setDetailsModalShow] = useState(false);
 
-  var headingText = basicInfo.sectionName.projects;
+  const headingText = basicInfo.sectionName.projects;
 
   const showDetailsModal = (data) => {
     setDeps(data);
     setDetailsModalShow(true);
   };
 
-  let detailsModalClose = () => {
+  const detailsModalClose = () => {
     setDetailsModalShow(false);
     setDeps(null);
   };
 
-  var projects =
-    projects.length > 0 &&
+  const ProjectCards = () =>
     projects.map((project) => (
       <Col key={project.title} className="projects__item my-3 px-3">
         <Card
@@ -74,7 +73,7 @@ const Projects = ({ projects, basicInfo }) => {
           xl={3}
           className="projects__list center"
         >
-          {projects}
+          {projects.length > 0 && <ProjectCards />}
         </Row>
         {deps && (
           <ProjectDetailsModal

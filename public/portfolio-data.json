@@ -119,6 +119,33 @@
           "name": "AWS"
         }
       ]
+    },
+    {
+      "title": "Land Traffic Management Portal",
+      "startDate": "2022",
+      "description": "Developed bespoke real-time traffic monitoring, reporting, and management dashboards for Singapore Land Traffic Authority (LTA). This provided LTA with an online portal to view live updates on their road traffic data through the use of user-friendly, intuitive graphical dashboards, and allowed them to monitor road incidents, create custom automated alerts, view live congestion maps, statistical charts and graphs, and much more, resulting in one of the most highly-capable, feature-rich land traffic management solutions ever created. I was responsible for developing complex Angular components for the dashboards, reviewing and deploying new code across environments, and migrating legacy code.",
+      "thumbnail": "carbon:road",
+      "images": [],
+      "theme": {
+        "text": "light",
+        "border": "light",
+        "background": "dark"
+      },
+      "url": "",
+      "technologies": [
+        {
+          "class": "devicon:angularjs",
+          "name": "Angular"
+        },
+        {
+          "class": "devicon:typescript",
+          "name": "TypeScript"
+        },
+        {
+          "class": "devicon:sass",
+          "name": "SCSS"
+        }
+      ]
     }
   ],
   "experience": [
