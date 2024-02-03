@@ -239,69 +239,229 @@
   "skills": {
     "icons": [
       {
-        "name": "HTML 5",
-        "class": "devicon-plain:html5",
-        "level": "95"
+        "name": "React",
+        "class": "devicon:react",
+        "level": "100"
       },
       {
-        "name": "CSS 3",
-        "class": "devicon-plain:css3",
+        "name": "Redux",
+        "class": "devicon:redux",
         "level": "95"
-      },
-      {
-        "name": "Angular",
-        "class": "devicon-plain:angularjs",
-        "level": "80"
       },
       {
         "name": "TypeScript",
-        "class": "devicon-plain:typescript",
+        "class": "devicon:typescript",
         "level": "90"
       },
       {
         "name": "JavaScript",
-        "class": "devicon-plain:javascript",
+        "class": "devicon:javascript",
+        "level": "95"
+      },
+      {
+        "name": "NodeJS",
+        "class": "devicon:nodejs",
+        "level": "90"
+      },
+      {
+        "name": "ViteJS",
+        "class": "devicon:vitejs",
         "level": "70"
       },
       {
-        "name": "Sass",
-        "class": "devicon:sass",
-        "level": "75"
+        "name": "Bun",
+        "class": "devicon:bun",
+        "level": "80"
       },
       {
-        "name": "Bootstrap",
-        "class": "devicon-plain:bootstrap",
+        "name": "SCSS",
+        "class": "devicon:sass",
+        "level": "95"
+      },
+      {
+        "name": "HTML5",
+        "class": "devicon:html5",
+        "level": "95"
+      },
+      {
+        "name": "CSS3",
+        "class": "devicon:css3",
+        "level": "95"
+      },
+      {
+        "name": "Storybook",
+        "class": "devicon:storybook",
         "level": "85"
       },
       {
+        "name": "Webpack",
+        "class": "devicon:webpack",
+        "level": "75"
+      },
+      {
+        "name": "Babel",
+        "class": "devicon:babel",
+        "level": "70"
+      },
+      {
+        "name": "Jest",
+        "class": "logos:jest",
+        "level": "90"
+      },
+      {
+        "name": "Enzyme",
+        "class": "logos:airbnb-icon",
+        "level": "85"
+      },
+      {
+        "name": "Angular 8+",
+        "class": "devicon:angularjs",
+        "level": "60"
+      },
+      {
+        "name": "REST API",
+        "class": "dashicons:rest-api",
+        "level": "85"
+      },
+      {
+        "name": "Postman",
+        "class": "devicon:postman",
+        "level": "85"
+      },
+      {
+        "name": "MongoDB",
+        "class": "devicon:mongodb",
+        "level": "85"
+      },
+      {
+        "name": "PowerBI",
+        "class": "simple-icons:powerbi",
+        "level": "35"
+      },
+      {
+        "name": "AWS",
+        "class": "devicon:amazonwebservices-wordmark",
+        "level": "80"
+      },
+      {
+        "name": "Azure",
+        "class": "devicon:azure",
+        "level": "60"
+      },
+      {
         "name": "Flutter",
-        "class": "devicon-plain:csharp",
+        "class": "devicon:flutter",
+        "level": "80"
+      },
+      {
+        "name": "Cookie Control",
+        "class": "emojione:cookie",
+        "level": "90"
+      },
+      {
+        "name": "Docker",
+        "class": "devicon:docker",
+        "level": "90"
+      },
+      {
+        "name": "Bash",
+        "class": "devicon-plain:bash",
+        "level": "85"
+      },
+      {
+        "name": "Linux",
+        "class": "devicon:linux",
+        "level": "85"
+      },
+      {
+        "name": "Apache",
+        "class": "devicon:apache",
+        "level": "75"
+      },
+      {
+        "name": "NGINX",
+        "class": "devicon:nginx",
+        "level": "85"
+      },
+      {
+        "name": "Linux",
+        "class": "devicon:linux",
+        "level": "85"
+      },
+      {
+        "name": "Bootstrap",
+        "class": "devicon:bootstrap",
+        "level": "75"
+      },
+      {
+        "name": "Carbon Design System",
+        "class": "carbon:carbon",
+        "level": "85"
+      },
+      {
+        "name": "Material UI",
+        "class": "devicon:materialui",
+        "level": "50"
+      },
+      {
+        "name": "Adobe Experience Manager",
+        "class": "arcticons:adobe-experience-manager",
+        "level": "85"
+      },
+      {
+        "name": "Adobe Dynamic Tag Manager",
+        "class": "arcticons:adobe-analytics",
+        "level": "85"
+      },
+      {
+        "name": "Split Tunnel VPN",
+        "class": "vscode-icons:file-type-ovpn",
         "level": "65"
       },
       {
-        "name": "MySql",
-        "class": "devicon-plain:mysql",
-        "level": "60"
+        "name": "Git",
+        "class": "devicon:git",
+        "level": "90"
       },
       {
-        "name": "MySql",
-        "class": "devicon-plain:mysql",
-        "level": "60"
+        "name": "GitHub Actions",
+        "class": "devicon:githubactions",
+        "level": "80"
       },
       {
-        "name": "MySql",
-        "class": "devicon-plain:mysql",
-        "level": "60"
+        "name": "CI/CD Pipelines",
+        "class": "vscode-icons:file-type-azurepipelines",
+        "level": "85"
       },
       {
-        "name": "MySql",
-        "class": "devicon-plain:mysql",
-        "level": "60"
+        "name": "WebdriverIO",
+        "class": "logos:webdriverio",
+        "level": "85"
       },
       {
-        "name": "MySql",
-        "class": "devicon-plain:mysql",
-        "level": "60"
+        "name": "Cucumber / Gherkin",
+        "class": "logos:cucumber",
+        "level": "95"
+      },
+      {
+        "name": "Selenium",
+        "class": "skill-icons:selenium",
+        "level": "85"
+      },
+      {
+        "name": "BrowserStack",
+        "class": "devicon:browserstack",
+        "level": "70"
+      },
+      {
+        "name": "Appium",
+        "class": "logos:appium",
+        "level": "50"
+      },
+      {
+        "name": "JIRA",
+        "class": "devicon:jira",
+        "level": "80"
       }
     ]
   }
