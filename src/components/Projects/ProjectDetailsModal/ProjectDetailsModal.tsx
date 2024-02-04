@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 import AwesomeSlider from "react-awesome-slider";
 import { Col, Modal } from "react-bootstrap";
 import { Icon } from "@iconify/react";
@@ -9,18 +9,28 @@ const ProjectDetailsModal = ({ show, onHide, data }) => {
   const [paddingHeight, setPaddingHeight] = useState(100);
   const { technologies, images, title, description, url } = data;
 
+  const imageRefs = Array.from(images, () => useRef(null));
+
   const getImageSlides = () => (
     <div className="project-details__modal__body__image-container">
       <AwesomeSlider
         animation="cubeAnimation"
         className="project-details__modal__body__image-container__slider"
         style={{ "--slider-height-percentage": `${paddingHeight}%` }}
+        onTransitionStart={(ref) => {
+          const nextImg = imageRefs[ref.nextIndex].current;
+          const { offsetWidth, offsetHeight } = nextImg;
+          const newPaddingHeight = (offsetHeight / offsetWidth) * 100;
+          setPaddingHeight(newPaddingHeight);
+          console.log(offsetWidth, offsetHeight);
+        }}
       >
         {images.map((elem, i) => (
           <div key={i}>
             <img
               src={elem}
               className="project-details__modal__body__image-container__img"
+              ref={imageRefs[i]}
               onLoad={(e) => {
                 const { offsetWidth, offsetHeight } = e.target;
                 const newPaddingHeight = (offsetHeight / offsetWidth) * 100;

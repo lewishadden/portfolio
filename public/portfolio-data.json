@@ -152,13 +152,16 @@
       "startDate": "2022",
       "description": "Architected and developed the foundations of the Front-End for a major module powering Audex, an online media visualisation and analysis portal. Renowned as a highly-skilled React developer, I was brought onboard to signle-handledly work on the React Front-End for the platforms Analyse module. I began by developing a POC, successfully demonstrating the ability to display a PowerBI graph in a React app which subscribes to the PowerBI data source and renders real-time analysis data. After having delivered on my React comptency, I concluded my time on the project after creating the official repository for the Analyse module, boilerplating the underlying technology to power the entire module.",
       "thumbnail": "solar:chart-bold",
-      "images": [],
+      "images": [
+        "images/projects/audex/homepage.png",
+        "images/projects/audex/about.png"
+      ],
       "theme": {
         "text": "light",
         "border": "light",
         "background": "dark"
       },
-      "url": "",
+      "url": "https://audex.media/welcome",
       "technologies": [
         {
           "class": "devicon:react",
