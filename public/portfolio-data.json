@@ -121,7 +121,7 @@
       ]
     },
     {
-      "title": "Land Traffic Management Portal",
+      "title": "Traffic Management Portal",
       "startDate": "2022",
       "description": "Developed bespoke real-time traffic monitoring, reporting, and management dashboards for Singapore Land Traffic Authority (LTA). This provided LTA with an online portal to view live updates on their road traffic data through the use of user-friendly, intuitive graphical dashboards, and allowed them to monitor road incidents, create custom automated alerts, view live congestion maps, statistical charts and graphs, and much more, resulting in one of the most highly-capable, feature-rich land traffic management solutions ever created. I was responsible for developing complex Angular components for the dashboards, reviewing and deploying new code across environments, and migrating legacy code.",
       "thumbnail": "carbon:road",
@@ -144,6 +144,33 @@
         {
           "class": "devicon:sass",
           "name": "SCSS"
+        }
+      ]
+    },
+    {
+      "title": "Audex",
+      "startDate": "2022",
+      "description": "Architected and developed the foundations of the Front-End for a major module powering Audex, an online media visualisation and analysis portal. Renowned as a highly-skilled React developer, I was brought onboard to signle-handledly work on the React Front-End for the platforms Analyse module. I began by developing a POC, successfully demonstrating the ability to display a PowerBI graph in a React app which subscribes to the PowerBI data source and renders real-time analysis data. After having delivered on my React comptency, I concluded my time on the project after creating the official repository for the Analyse module, boilerplating the underlying technology to power the entire module.",
+      "thumbnail": "solar:chart-bold",
+      "images": [],
+      "theme": {
+        "text": "light",
+        "border": "light",
+        "background": "dark"
+      },
+      "url": "",
+      "technologies": [
+        {
+          "class": "devicon:react",
+          "name": "React"
+        },
+        {
+          "class": "devicon:typescript",
+          "name": "TypeScript"
+        },
+        {
+          "class": "simple-icons:powerbi",
+          "name": "PowerBI"
         }
       ]
     }
