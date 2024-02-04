@@ -32,13 +32,7 @@ const About = ({ basicInfo }) => {
                   />
                 </Col>
                 <Col md={12} lg={7} xl={9} className="ps-md-0">
-                  <Card.Body
-                    className="font-trebuchet text-start text-justify ms-3 me-3"
-                    style={{
-                      height: "auto",
-                      lineHeight: "200%",
-                    }}
-                  >
+                  <Card.Body className="font-trebuchet text-start text-justify ms-3 me-3">
                     <Card.Title
                       dangerouslySetInnerHTML={{ __html: descriptionHeader }}
                       className="about__body__picture-card__title mb-3"
