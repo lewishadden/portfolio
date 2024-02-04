@@ -19,9 +19,9 @@
         "class": "devicon:linkedin"
       }
     ],
-    "image": "myProfile.jpg",
+    "image": "portrait.png",
     "descriptionHeader": "Hi! <span class='wave'>👋</span>",
-    "description": "I'm not your average Full Stack Developer<br /><br />I'm more like a coding wizard <span style='font-size:40px'>&#129497</span> with almost 7 years of experience brewing up digital magic potions! <span style='font-size:40px'>🧪</span><br /><br />Armed with React, Redux, TypeScript, Node.js, and AWS spells, I've been conjuring high-quality, scalable web applications fit for the kingdom <span style='font-size:40px'>🏰</span> of enterprise-scale businesses.",
+    "description": "I'm Lewis. ",
     "sectionName": {
       "about": "About me",
       "projects": "Projects",
@@ -172,8 +172,35 @@
           "name": "TypeScript"
         },
         {
-          "class": "simple-icons:powerbi",
+          "class": "logos:microsoft-power-bi",
           "name": "PowerBI"
+        }
+      ]
+    },
+    {
+      "title": "Home Greening Microsite",
+      "startDate": "2023",
+      "description": "Architected and designed the entire cloud infrastructure for a proposed new micro-site for UK Power Networks. I was the sole architect responsible for infrastructure and solution design. I led the cloud and font-end developmnet teams during the design and planning phases, guiding them through the solution and implementation. Using Azure as their preferred cloud provider, I worked closely with the client to ensure that my infrastructure design was compliant with their rigid security standards. After working closely with the clients security team, I designed an optimal cloud infrastructure solution that met their functional and security requiremnts. I gathered the data requirements and designed an optimised Cosmos DB database schema I created stunning architecture diagrams, as well as a thorough technical breakdown of the Azure services used, decisions made for each service, and implementaion/configuration steps.",
+      "thumbnail": "mdi:home-electricity",
+      "images": [],
+      "theme": {
+        "text": "light",
+        "border": "light",
+        "background": "dark"
+      },
+      "url": "",
+      "technologies": [
+        {
+          "class": "devicon:azure",
+          "name": "Azure"
+        },
+        {
+          "class": "material-symbols:api",
+          "name": "REST API"
+        },
+        {
+          "class": "devicon:cosmosdb",
+          "name": "Cosmos DB"
         }
       ]
     }
@@ -377,7 +404,7 @@
       },
       {
         "name": "REST API",
-        "class": "dashicons:rest-api",
+        "class": "material-symbols:api",
         "level": "85"
       },
       {
@@ -392,7 +419,7 @@
       },
       {
         "name": "PowerBI",
-        "class": "simple-icons:powerbi",
+        "class": "logos:microsoft-power-bi",
         "level": "35"
       },
       {

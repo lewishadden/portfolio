@@ -22,7 +22,6 @@ const ProjectDetailsModal = ({ show, onHide, data }) => {
           const { offsetWidth, offsetHeight } = nextImg;
           const newPaddingHeight = (offsetHeight / offsetWidth) * 100;
           setPaddingHeight(newPaddingHeight);
-          console.log(offsetWidth, offsetHeight);
         }}
       >
         {images.map((elem, i) => (
