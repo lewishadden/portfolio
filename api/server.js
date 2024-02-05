@@ -1,11 +1,10 @@
-// require('dotenv').config({ path: __dirname+'/.env', override: true });
 import express from "express";
 import {
   json as bodyParserJson,
   urlencoded as bodyParserUrlencoded,
 } from "body-parser";
 import cors from "cors";
-import sendMail from "./utils/sendMail.js";
+import sendMail from "./utils/sendMail";
 
 const { PORT } = import.meta.env;
 
@@ -18,17 +17,10 @@ app.use(bodyParserJson());
 app.use(bodyParserUrlencoded({ extended: true }));
 
 app.post("/api/sendmail", async (req, res) => {
-  const { firstName, lastName, email: to, message } = req.body;
-  const subject = "New Portfolio message";
+  const { firstName, lastName, email: from, message } = req.body;
 
   try {
-    await sendMail(
-      `${firstName} ${lastName}`,
-      "lewishadden@gmail.com",
-      to,
-      subject,
-      message
-    );
+    await sendMail(`${firstName} ${lastName}`, from, message);
     res.status(200).send({ message: "Email sent successfully" });
   } catch (error) {
     console.error("Error sending email:", error);

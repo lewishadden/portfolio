@@ -18,9 +18,9 @@ const Contact = ({ basicInfo }) => {
   const headingText = sectionName.contact;
 
   const formSchema = object().shape({
-    firstName: string().required("Please enter your first name"),
-    lastName: string().required("Please enter your last name"),
-    email: string().email().required("Please enter your email"),
+    firstName: string().required("Enter your first name"),
+    lastName: string().required("Enter your last name"),
+    email: string().email().required("Enter your email"),
     message: string().required("Please write a message"),
   });
 
@@ -85,8 +85,12 @@ const Contact = ({ basicInfo }) => {
               }}
             >
               {({ handleSubmit, handleChange, values, touched, errors }) => (
-                <Form noValidate onSubmit={handleSubmit}>
-                  <Row className="gx-3 gy-4">
+                <Form
+                  noValidate
+                  onSubmit={handleSubmit}
+                  className="contact__body__form"
+                >
+                  <Row className="g-3">
                     <Col sm={12} md={6}>
                       <Form.Group controlId="formFirstName">
                         <Form.Label>First Name</Form.Label>
@@ -119,7 +123,7 @@ const Contact = ({ basicInfo }) => {
                         </Form.Control.Feedback>
                       </Form.Group>
                     </Col>
-                    <Col sm={12} md={6}>
+                    <Col md={12}>
                       <Form.Group controlId="formEmail">
                         <Form.Label>Email address</Form.Label>
                         <Form.Control
@@ -152,9 +156,18 @@ const Contact = ({ basicInfo }) => {
                         </Form.Control.Feedback>
                       </Form.Group>
                     </Col>
-                    <Col md={12}>
-                      <Button variant="primary" type="submit">
-                        Submit
+                    <Col sm={12} md={6} className="mt-4">
+                      <Button
+                        variant="info"
+                        type="submit"
+                        className="contact__body__form__submit-btn center"
+                        size="lg"
+                      >
+                        <Icon
+                          icon="mdi:send"
+                          className="contact__body__form__submit-btn__icon me-1"
+                        />
+                        <span className="ms-1">Send Message</span>
                       </Button>
                     </Col>
                   </Row>

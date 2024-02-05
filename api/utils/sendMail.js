@@ -1,6 +1,14 @@
 import nodemailer from "nodemailer";
 import { appendFile } from "fs";
-const { EMAIL_USER, EMAIL_PASS } = import.meta.env;
+const { SMTP_PASS, SMTP_EMAIL } = import.meta.env;
+
+import {
+  senderEmail,
+  recieverEmail,
+  emailSubject,
+  smtpHost,
+  smtpPort,
+} from "../config/config";
 
 const logToFile = (message) => {
   const logMessage = `[${new Date().toISOString()}] ${message}\n`;
@@ -11,23 +19,26 @@ const logToFile = (message) => {
   });
 };
 
-const sendMail = async (name, to, from, subject, message) => {
+const sendMail = async (name, from, message) => {
   logToFile("Sending email..., in the sendMail.js file");
   try {
-    const transporter = nodemailer.createTransport({
-      service: "postfix",
-      host: "mail.lewishadden.com",
-      secure: true,
-      port: 587,
-      auth: { user: EMAIL_USER, pass: EMAIL_PASS },
-      tls: { rejectUnauthorized: false },
+    let transporter = nodemailer.createTransport({
+      host: smtpHost,
+      port: smtpPort,
+      secure: false,
+      auth: {
+        user: SMTP_EMAIL,
+        pass: SMTP_PASS,
+      },
     });
 
     const mailOptions = {
-      from: from,
-      to: to,
-      subject: subject,
-      text: `${name} has sent a message: ${message}`,
+      from: `${name} <${senderEmail}>`,
+      sender: from,
+      to: recieverEmail,
+      replyTo: from,
+      subject: emailSubject,
+      text: message,
     };
 
     await transporter.sendMail(mailOptions);
