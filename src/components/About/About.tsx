@@ -27,7 +27,7 @@ const About = ({ basicInfo }) => {
                 <Col md={12} lg={5} xl={3} className="pe-md-0">
                   <Card.Img
                     variant="top"
-                    className="about__body__picture-card__image rounded-start"
+                    className="about__body__picture-card__image"
                     src={profilepic}
                   />
                 </Col>

@@ -29,6 +29,8 @@
           max-height: 60vh;
         }
         @media (min-width: 992px) {
+          border-top-right-radius: 0 !important;
+          border-bottom-left-radius: var(--bs-card-inner-border-radius);
           max-height: unset;
         }
       }
