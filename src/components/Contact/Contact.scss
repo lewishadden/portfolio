@@ -1,0 +1,45 @@
+.contact {
+  &__heading {
+    text-transform: uppercase;
+    letter-spacing: 3px;
+  }
+
+  &__body {
+    padding: 5% 0;
+
+    // .form-label.required:after {
+    //   content: "*";
+    //   color: red;
+    // }
+
+    &__personal-info {
+      justify-content: space-evenly;
+      @media (min-width: 992px) {
+        flex-direction: column !important;
+      }
+
+      &__item {
+        height: fit-content;
+
+        &__icon-badge {
+          padding: 1rem;
+          width: fit-content;
+          height: fit-content;
+          border: 1px solid grey;
+          &__icon {
+            font-size: 2rem;
+          }
+        }
+        &__details {
+          &__name {
+            font-size: 1.5rem;
+            font-weight: bold;
+          }
+          &__text {
+            font-size: 1rem;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,6 +1,14 @@
 import { useState, useEffect } from "react";
 
-import { About, Experience, Footer, Home, Projects, Skills } from "components";
+import {
+  About,
+  Experience,
+  Footer,
+  Home,
+  Projects,
+  Skills,
+  Contact,
+} from "components";
 
 import "./App.scss";
 
@@ -36,7 +44,7 @@ const App = () => {
           basicInfo={resumeData.basicInfo}
         />
         <Skills skills={resumeData.skills} basicInfo={resumeData.basicInfo} />
-
+        <Contact basicInfo={resumeData.basicInfo} />
         <Footer basicInfo={resumeData.basicInfo} />
       </>
     )) ||

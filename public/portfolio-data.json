@@ -26,8 +26,21 @@
       "about": "About me",
       "projects": "Projects",
       "skills": "Skills",
-      "experience": "Experience"
-    }
+      "experience": "Experience",
+      "contact": "Contact Me"
+    },
+    "contactInfo": [
+      {
+        "name": "Email",
+        "class": "clarity:email-solid",
+        "value": "lewishadden@gmail.com"
+      },
+      {
+        "name": "Mobile",
+        "class": "clarity:phone-handset-solid",
+        "value": "+447714512514"
+      }
+    ]
   },
   "projects": [
     {
