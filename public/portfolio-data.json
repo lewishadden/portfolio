@@ -33,12 +33,14 @@
       {
         "name": "Email",
         "class": "clarity:email-solid",
-        "value": "lewishadden@gmail.com"
+        "value": "lewishadden@gmail.com",
+        "link": "mailto:lewishadden@gmail.com"
       },
       {
         "name": "Mobile",
         "class": "clarity:phone-handset-solid",
-        "value": "+447714512514"
+        "value": "+447714512514",
+        "link": "tel:+447714512514"
       }
     ]
   },

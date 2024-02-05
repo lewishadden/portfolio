@@ -33,17 +33,21 @@ const Contact = ({ basicInfo }) => {
         key={i}
       >
         <div className="contact__body__personal-info__item__icon-badge rounded-circle me-4">
-          <Icon
-            icon={info.class}
-            className="contact__body__personal-info__item__icon-badge__icon"
-          />
+          <a href={info.link} target="_blank">
+            <Icon
+              icon={info.class}
+              className="contact__body__personal-info__item__icon-badge__icon"
+            />
+          </a>
         </div>
         <div className="contact__body__personal-info__item__details">
           <div className="contact__body__personal-info__item__details__name">
             {info.name}
           </div>
           <div className="contact__body__personal-info__item__details__text">
-            {info.value}
+            <a href={info.link} target="_blank">
+              {info.value}
+            </a>
           </div>
         </div>
       </Col>
