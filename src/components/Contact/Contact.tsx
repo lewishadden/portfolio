@@ -1,44 +1,34 @@
-import {
-  Container,
-  Row,
-  Col,
-  Stack,
-  Form,
-  Button,
-  InputGroup,
-} from "react-bootstrap";
-import { Formik } from "formik";
-import { object, string } from "yup";
+import { useState, useEffect } from "react";
+import { Container, Row, Col, Toast } from "react-bootstrap";
 import { Icon } from "@iconify/react";
+
+import ContactForm from "./ContactForm/ContactForm";
 
 import "./Contact.scss";
 
 const Contact = ({ basicInfo }) => {
+  const [submitted, setSubmitted] = useState(false);
+  const [showToast, setShowToast] = useState(false);
+  const [error, setError] = useState(false);
+
+  useEffect(() => {
+    if (!showToast && error) setError(false);
+  }, [showToast]);
+
+  useEffect(() => {
+    if (submitted) {
+      if (error) setError(false);
+      setShowToast(true);
+    }
+  }, [submitted]);
+
   const { sectionName, contactInfo } = basicInfo;
   const headingText = sectionName.contact;
-
-  const formSchema = object().shape({
-    firstName: string().required("Enter your first name"),
-    lastName: string().required("Enter your last name"),
-    email: string().email().required("Enter your email"),
-    message: string().required("Please write a message"),
-  });
-
-  const handleSubmit = async ({ firstName, lastName, email, message }) => {
-    const response = await fetch("http://localhost:3000/api/sendmail", {
-      method: "POST",
-      body: JSON.stringify({ firstName, lastName, email, message }),
-      headers: { "Content-Type": "application/json" },
-    });
-    const body = await response.json();
-    console.log(body);
-  };
 
   const ContactBadges = () =>
     contactInfo.map((info, i) => (
       <Col
         md="auto"
-        lg={12}
         className="contact__body__personal-info__item d-flex"
         key={i}
       >
@@ -67,113 +57,50 @@ const Contact = ({ basicInfo }) => {
             <h2 className="text-center contact__heading">{headingText}</h2>
           </Col>
         </Row>
-        <Row className="contact__body g-5">
-          <Col md={12} lg={4}>
-            <Row className="contact__body__personal-info h-100 gy-4">
+        <Row
+          className={`contact__body g-5${submitted ? " form-submitted" : ""}`}
+        >
+          <Col
+            md={12}
+            lg={submitted ? { span: 8, offset: 4 } : 4}
+            className="mx-auto"
+          >
+            <Row className="contact__body__personal-info gy-4">
               <ContactBadges />
             </Row>
           </Col>
-          <Col md={12} lg={8}>
-            <Formik
-              validationSchema={formSchema}
-              onSubmit={handleSubmit}
-              initialValues={{
-                firstName: "",
-                lastName: "",
-                email: "",
-                message: "",
+          {!submitted && (
+            <ContactForm
+              onSuccess={() => {
+                setSubmitted(true);
               }}
+              onFail={() => {
+                setError(true);
+                setShowToast(true);
+              }}
+            />
+          )}
+          <Col md={12} lg={{ span: 8, offset: 4 }} className="my-0 mx-auto">
+            <Toast
+              className="contact__body__submitted-toast text-center mt-5"
+              show={showToast}
+              animation
+              onClose={() => setShowToast(false)}
+              bg={error ? "danger" : "success"}
             >
-              {({ handleSubmit, handleChange, values, touched, errors }) => (
-                <Form
-                  noValidate
-                  onSubmit={handleSubmit}
-                  className="contact__body__form"
-                >
-                  <Row className="g-3">
-                    <Col sm={12} md={6}>
-                      <Form.Group controlId="formFirstName">
-                        <Form.Label>First Name</Form.Label>
-                        <Form.Control
-                          type="text"
-                          placeholder="First Name *"
-                          name="firstName"
-                          value={values.firstName}
-                          onChange={handleChange}
-                          isInvalid={!!errors.firstName}
-                        />
-                        <Form.Control.Feedback type="invalid">
-                          {errors.firstName}
-                        </Form.Control.Feedback>
-                      </Form.Group>
-                    </Col>
-                    <Col sm={12} md={6}>
-                      <Form.Group controlId="formLasttName">
-                        <Form.Label>Last Name</Form.Label>
-                        <Form.Control
-                          type="text"
-                          placeholder="Last Name *"
-                          name="lastName"
-                          value={values.lastName}
-                          onChange={handleChange}
-                          isInvalid={!!errors.lastName}
-                        />
-                        <Form.Control.Feedback type="invalid">
-                          {errors.lastName}
-                        </Form.Control.Feedback>
-                      </Form.Group>
-                    </Col>
-                    <Col md={12}>
-                      <Form.Group controlId="formEmail">
-                        <Form.Label>Email address</Form.Label>
-                        <Form.Control
-                          type="email"
-                          placeholder="Email *"
-                          name="email"
-                          value={values.email}
-                          onChange={handleChange}
-                          isInvalid={!!errors.email}
-                        />
-                        <Form.Control.Feedback type="invalid">
-                          {errors.email}
-                        </Form.Control.Feedback>
-                      </Form.Group>
-                    </Col>
-                    <Col md={12}>
-                      <Form.Group controlId="formMessage">
-                        <Form.Label>Message</Form.Label>
-                        <Form.Control
-                          as="textarea"
-                          rows={4}
-                          placeholder="Your message *"
-                          name="message"
-                          value={values.message}
-                          onChange={handleChange}
-                          isInvalid={!!errors.message}
-                        />
-                        <Form.Control.Feedback type="invalid">
-                          {errors.message}
-                        </Form.Control.Feedback>
-                      </Form.Group>
-                    </Col>
-                    <Col sm={12} md={6} className="mt-4">
-                      <Button
-                        variant="info"
-                        type="submit"
-                        className="contact__body__form__submit-btn center"
-                        size="lg"
-                      >
-                        <Icon
-                          icon="mdi:send"
-                          className="contact__body__form__submit-btn__icon me-1"
-                        />
-                        <span className="ms-1">Send Message</span>
-                      </Button>
-                    </Col>
-                  </Row>
-                </Form>
-              )}
-            </Formik>
+              <Toast.Header>
+                <strong className="mx-auto">
+                  {error
+                    ? "There was a problem sending the message"
+                    : "Message sent!"}
+                </strong>
+              </Toast.Header>
+              <Toast.Body>
+                {error
+                  ? "Please try again soon, or contact me directly via email or phone"
+                  : "I will be in touch with you shortly to answer your message."}
+              </Toast.Body>
+            </Toast>
           </Col>
         </Row>
       </Container>
