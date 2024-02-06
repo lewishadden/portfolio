@@ -6,7 +6,7 @@ import {
 import cors from "cors";
 import sendMail from "./utils/sendMail";
 
-const { PORT } = import.meta.env;
+const { PORT } = process.env;
 
 const port = PORT || 3001;
 

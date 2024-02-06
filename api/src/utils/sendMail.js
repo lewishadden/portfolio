@@ -1,6 +1,6 @@
 import nodemailer from "nodemailer";
 import { appendFile } from "fs";
-const { SMTP_PASS, SMTP_EMAIL } = import.meta.env;
+const { SMTP_PASS, SMTP_EMAIL } = process.env;
 
 import {
   senderEmail,
