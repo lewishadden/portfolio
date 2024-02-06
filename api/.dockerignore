@@ -15,5 +15,4 @@ helm-charts
 coverage*
 
 index.js
-portfolio-api
 sendMail.log

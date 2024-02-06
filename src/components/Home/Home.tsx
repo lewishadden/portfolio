@@ -3,8 +3,8 @@ import { TypeAnimation } from "react-type-animation";
 import { Icon } from "@iconify/react";
 
 import { GitHubCornerSVG } from "icons";
-
 import { githubRepoUrl } from "config/global";
+
 import "./Home.scss";
 
 const Header = ({ basicInfo }) => {

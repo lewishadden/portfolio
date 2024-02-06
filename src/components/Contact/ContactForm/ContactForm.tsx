@@ -4,6 +4,8 @@ import { Formik } from "formik";
 import { object, string } from "yup";
 import { Icon } from "@iconify/react";
 
+import { apiServer } from "config/global";
+
 import "./ContactForm.scss";
 
 const ContactForm = ({ onSuccess, onFail }) => {
@@ -18,7 +20,7 @@ const ContactForm = ({ onSuccess, onFail }) => {
 
   const handleSubmit = async ({ firstName, lastName, email, message }) => {
     setLoading(true);
-    const response = await fetch("http://localhost:3000/api/sendmail", {
+    const response = await fetch(`${apiServer}/api/sendmail`, {
       method: "POST",
       body: JSON.stringify({ firstName, lastName, email, message }),
       headers: { "Content-Type": "application/json" },
@@ -125,19 +127,19 @@ const ContactForm = ({ onSuccess, onFail }) => {
                       <Spinner
                         as="span"
                         animation="border"
-                        size="sm"
+                        className="contact__body__form__submit-btn__loading-spinner me-2"
                         role="status"
                         aria-hidden="true"
                       />
-                      <span>Loading...</span>
+                      <strong className="ms-2">Submitting...</strong>
                     </>
                   ) : (
                     <>
                       <Icon
                         icon="mdi:send"
-                        className="contact__body__form__submit-btn__icon me-1"
+                        className="contact__body__form__submit-btn__icon me-2"
                       />
-                      <span className="ms-1">Send Message</span>
+                      <strong className="ms-2">Send Message</strong>
                     </>
                   )}
                 </Button>

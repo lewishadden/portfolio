@@ -32,14 +32,15 @@ const Contact = ({ basicInfo }) => {
         className="contact__body__personal-info__item d-flex"
         key={i}
       >
-        <div className="contact__body__personal-info__item__icon-badge rounded-circle me-4">
-          <a href={info.link} target="_blank">
+        <a href={info.link} target="_blank">
+          <div className="contact__body__personal-info__item__icon-badge rounded-circle me-4">
             <Icon
               icon={info.class}
               className="contact__body__personal-info__item__icon-badge__icon"
             />
-          </a>
-        </div>
+          </div>
+        </a>
+
         <div className="contact__body__personal-info__item__details">
           <div className="contact__body__personal-info__item__details__name">
             {info.name}

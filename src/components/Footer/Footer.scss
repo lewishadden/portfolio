@@ -1,10 +1,7 @@
 .footer {
-  background: #1f1f1f;
+  background: #191919;
   min-height: 100px;
-  width: 100%;
   overflow: hidden;
-  font-size: 14px;
-  color: white;
   position: relative;
   text-align: center;
 
@@ -13,7 +10,6 @@
   }
 
   &__social-links {
-    margin-top: 50px;
-    font-size: 22px;
+    padding-top: 3rem;
   }
 }
