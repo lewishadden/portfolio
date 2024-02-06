@@ -1,14 +1,8 @@
 import nodemailer from "nodemailer";
 import { appendFile } from "fs";
-const { SMTP_PASS, SMTP_EMAIL } = process.env;
+const { SMTP_HOST, SMTP_PORT, SMTP_PASS, SMTP_EMAIL } = import.meta.env;
 
-import {
-  senderEmail,
-  recieverEmail,
-  emailSubject,
-  smtpHost,
-  smtpPort,
-} from "../config/config";
+import { senderEmail, recieverEmail, emailSubject } from "../config/config";
 
 const logToFile = (message) => {
   const logMessage = `[${new Date().toISOString()}] ${message}\n`;
@@ -23,8 +17,8 @@ const sendMail = async (name, from, message) => {
   logToFile("Sending email..., in the sendMail.js file");
   try {
     let transporter = nodemailer.createTransport({
-      host: smtpHost,
-      port: smtpPort,
+      host: SMTP_HOST,
+      port: SMTP_PORT,
       secure: false,
       auth: {
         user: SMTP_EMAIL,

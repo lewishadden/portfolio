@@ -3,6 +3,7 @@ Dockerfile*
 docker-compose*
 .dockerignore
 .git
+.env*
 .gitignore
 README.md
 LICENSE
@@ -12,3 +13,7 @@ helm-charts
 .editorconfig
 .idea
 coverage*
+
+index.js
+portfolio-api
+sendMail.log
