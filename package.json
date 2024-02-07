@@ -9,7 +9,10 @@
     "build": "bunx --bun vite build",
     "build:vite": "tsc && vite build",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "s3:deploy": "bun run s3:upload && bun run s3:purge",
+    "s3:upload": "./helpers/deployBuildS3.sh",
+    "s3:purge": "./helpers/purgeCdnCache.sh"
   },
   "dependencies": {
     "@iconify/react": "^4.1.1",
