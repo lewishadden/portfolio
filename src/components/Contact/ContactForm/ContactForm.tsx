@@ -20,7 +20,7 @@ const ContactForm = ({ onSuccess, onFail }) => {
 
   const handleSubmit = async ({ firstName, lastName, email, message }) => {
     setLoading(true);
-    const response = await fetch(`${apiServer}/api/sendmail`, {
+    const response = await fetch(`${apiServer}/api/api/sendmail`, {
       method: "POST",
       body: JSON.stringify({ firstName, lastName, email, message }),
       headers: { "Content-Type": "application/json" },
