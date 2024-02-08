@@ -5,12 +5,16 @@
   "type": "module",
   "version": "0.1.1",
   "scripts": {
-    "build": "bun build ./index.js --target=node --minify --outfile=dist/bundle.js"
+    "build": "rollup --config"
   },
   "dependencies": {
     "nodemailer": "^6.9.9"
   },
   "devDependencies": {
-    "bun": "^1.0.26"
+    "@rollup/plugin-json": "^6.1.0",
+    "@rollup/plugin-terser": "^0.4.4",
+    "rollup": "^4.9.6",
+    "rollup-plugin-commonjs": "^10.1.0",
+    "rollup-plugin-node-resolve": "^5.2.0"
   }
 }

@@ -4,14 +4,14 @@
     "namespace": "fn-9ad136d2-3ff6-441f-92d6-e63dcc07d2ce",
     "packageVersions": {
       "portfolio-api": {
-        "version": "0.0.36",
+        "version": "0.0.45",
         "digest": "1c5aaf1e488fc383780c3e3bf3ec2739d6ebb2b2007fdd9fbf5cd6c6fba02e5b"
       }
     },
     "actionVersions": {
       "portfolio-api/sendmail": {
-        "version": "0.0.38",
-        "digest": "4c0ccfcc813a3c5714db3d8bab02ee151723fc04b6d420d02a0bf8cbe44f61a4"
+        "version": "0.0.47",
+        "digest": "8806afae8e30a9715de5723ed28f5b4727a595da0837c81d512a101013903c5f"
       }
     }
   }

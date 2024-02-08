@@ -8,6 +8,6 @@ packages:
           SMTP_PORT: "${SMTP_PORT}"
           SMTP_EMAIL: "${SMTP_EMAIL}"
           SMTP_PASS: "${SMTP_PASS}"
-          # LOG_DESTINATIONS: '[{"datadog":{"endpoint":"https://http-intake.logs.datadoghq.com","api_key":"f8eb6cec4eae129da1408c8960d9ea40"}}]'
+          # LOG_DESTINATIONS: '[{"papertrail":{"token":"GfCJCjOoEiIqsRnQU2AunP2i3uue"}}]'
 
         
