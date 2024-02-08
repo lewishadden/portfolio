@@ -1,5 +1,5 @@
 packages:
-  - name: portfolio-api
+  - name: api
     actions:
       - name: sendmail
         runtime: nodejs:18
