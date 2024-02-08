@@ -1,0 +1,16 @@
+{
+  "name": "sendmail",
+  "main": "index.js",
+  "description": "Serverless email sender",
+  "type": "module",
+  "version": "0.1.1",
+  "scripts": {
+    "build": "bun build ./index.js --target=node --minify --outfile=dist/bundle.js"
+  },
+  "dependencies": {
+    "nodemailer": "^6.9.9"
+  },
+  "devDependencies": {
+    "bun": "^1.0.26"
+  }
+}
