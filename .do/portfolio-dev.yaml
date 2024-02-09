@@ -39,6 +39,7 @@ ingress:
           prefix: /
     - component:
         name: api
+        rewrite: /v1/
       cors:
         allow_origins:
           - regex: '"*"'
@@ -52,9 +53,6 @@ static_sites:
       - key: VITE_API_URL
         scope: BUILD_TIME
         value: ${api.PUBLIC_URL}
-      - key: VITE_API_PATH
-        scope: BUILD_TIME
-        value: ${api.PUBLIC_ROUTE_PATH}
     github:
       branch: develop
       deploy_on_push: true
