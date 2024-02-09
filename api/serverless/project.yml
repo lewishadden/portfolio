@@ -1,13 +1,10 @@
 packages:
-  - name: api
+  - name: v1
     actions:
       - name: sendmail
         runtime: nodejs:18
-        environment: 
-          SMTP_HOST: "${SMTP_HOST}"
+        environment:
+          SMTP_HOST: ${SMTP_HOST}
           SMTP_PORT: "${SMTP_PORT}"
-          SMTP_EMAIL: "${SMTP_EMAIL}"
-          SMTP_PASS: "${SMTP_PASS}"
-          # LOG_DESTINATIONS: '[{"papertrail":{"token":"GfCJCjOoEiIqsRnQU2AunP2i3uue"}}]'
-
-        
+          SMTP_EMAIL: ${SMTP_EMAIL}
+          SMTP_PASS: ${SMTP_PASS}

@@ -1,0 +1,68 @@
+name: portfolio
+region: lon
+alerts:
+  - rule: DEPLOYMENT_FAILED
+  - rule: DOMAIN_FAILED
+domains:
+  - domain: lewishadden.com
+    type: PRIMARY
+    zone: lewishadden.com
+  - domain: portfolio.lewishadden.com
+    type: ALIAS
+    zone: lewishadden.com
+  - domain: www.lewishadden.com
+    type: ALIAS
+    zone: lewishadden.com
+features:
+  - buildpack-stack=ubuntu-22
+functions:
+  - envs:
+      - key: SMTP_HOST
+        scope: RUN_TIME
+        value: smtp.gmail.com
+      - key: SMTP_PORT
+        scope: RUN_TIME
+        value: "587"
+      - key: SMTP_EMAIL
+        scope: RUN_TIME
+        value: someone@example.com
+      - key: SMTP_PASS
+        scope: RUN_TIME
+        type: SECRET
+        value: password
+    github:
+      branch: main
+      deploy_on_push: true
+      repo: lewishadden/portfolio
+    name: api
+    source_dir: api/serverless
+ingress:
+  rules:
+    - component:
+        name: website
+      match:
+        path:
+          prefix: /
+    - component:
+        name: api
+        rewrite: /v1/
+      cors:
+        allow_origins:
+          - regex: '"*"'
+      match:
+        path:
+          prefix: /api
+static_sites:
+  - build_command: npm run build
+    environment_slug: node-js
+    envs:
+      - key: VITE_API_URL
+        scope: BUILD_TIME
+        value: ${api.PUBLIC_URL}
+    github:
+      branch: main
+      deploy_on_push: true
+      repo: lewishadden/portfolio
+    name: website
+    output_dir: dist
+    source_dir: /
