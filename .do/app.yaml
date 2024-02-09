@@ -1,4 +1,4 @@
-name: portfolio-app
+name: portfolio
 region: lon
 alerts:
   - rule: DEPLOYMENT_FAILED
@@ -36,20 +36,20 @@ functions:
     name: api
     source_dir: api/serverless
 ingress:
-rules:
-  - component:
-      name: api
-    cors:
-      allow_origins:
-        - regex: '"*"'
-    match:
-      path:
-        prefix: /api
-  - component:
-      name: website
-    match:
-      path:
-        prefix: /
+  rules:
+    - component:
+        name: api
+      cors:
+        allow_origins:
+          - regex: '"*"'
+      match:
+        path:
+          prefix: /api
+    - component:
+        name: website
+      match:
+        path:
+          prefix: /
 static_sites:
   - build_command: npm run build
     environment_slug: node-js
