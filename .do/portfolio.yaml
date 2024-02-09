@@ -1,4 +1,4 @@
-name: portfolio-dev
+name: portfolio
 region: lon
 alerts:
   - rule: DEPLOYMENT_FAILED
@@ -28,7 +28,7 @@ functions:
         scope: RUN_TIME
         type: SECRET
     github:
-      branch: develop
+      branch: main
       deploy_on_push: true
       repo: lewishadden/portfolio
     name: api
@@ -59,7 +59,7 @@ static_sites:
         scope: BUILD_TIME
         value: ${api.PUBLIC_ROUTE_PATH}
     github:
-      branch: develop
+      branch: main
       deploy_on_push: true
       repo: lewishadden/portfolio
     name: website

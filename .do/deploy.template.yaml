@@ -5,14 +5,8 @@ spec:
     - rule: DEPLOYMENT_FAILED
     - rule: DOMAIN_FAILED
   domains:
-    - domain: lewishadden.com
+    - domain: portfolio-dev.lewishadden.com
       type: PRIMARY
-      zone: lewishadden.com
-    - domain: portfolio.lewishadden.com
-      type: ALIAS
-      zone: lewishadden.com
-    - domain: www.lewishadden.com
-      type: ALIAS
       zone: lewishadden.com
   functions:
     - envs:
