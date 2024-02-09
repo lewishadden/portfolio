@@ -23,6 +23,7 @@ functions:
       - key: SMTP_PASS
         scope: RUN_TIME
         type: SECRET
+        value: password
     github:
       branch: develop
       deploy_on_push: true
