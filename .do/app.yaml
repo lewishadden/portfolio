@@ -30,7 +30,7 @@ functions:
         scope: RUN_TIME
         type: SECRET
     github:
-      branch: main
+      branch: develop
       deploy_on_push: true
       repo: lewishadden/portfolio
     name: api
@@ -61,7 +61,7 @@ static_sites:
         scope: RUN_AND_BUILD_TIME
         value: ${api.PUBLIC_ROUTE_PATH}
     github:
-      branch: main
+      branch: develop
       deploy_on_push: true
       repo: lewishadden/portfolio
     name: website
