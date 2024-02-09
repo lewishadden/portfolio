@@ -17,18 +17,18 @@ features:
   - buildpack-stack=ubuntu-22
 functions:
   - envs:
-    - key: SMTP_HOST
-      scope: RUN_TIME
-      value: smtp.gmail.com
-    - key: SMTP_PORT
-      scope: RUN_TIME
-      value: "587"
-    - key: SMTP_EMAIL
-      scope: RUN_TIME
-      value: someone@example.com
-    - key: SMTP_PASS
-      scope: RUN_TIME
-      type: SECRET
+      - key: SMTP_HOST
+        scope: RUN_TIME
+        value: smtp.gmail.com
+      - key: SMTP_PORT
+        scope: RUN_TIME
+        value: "587"
+      - key: SMTP_EMAIL
+        scope: RUN_TIME
+        value: someone@example.com
+      - key: SMTP_PASS
+        scope: RUN_TIME
+        type: SECRET
     github:
       branch: main
       deploy_on_push: true
@@ -36,12 +36,12 @@ functions:
     name: api
     source_dir: api/serverless
 ingress:
-  rules:
+rules:
   - component:
       name: api
     cors:
       allow_origins:
-      - regex: '"*"'
+        - regex: '"*"'
     match:
       path:
         prefix: /api
@@ -54,12 +54,12 @@ static_sites:
   - build_command: npm run build
     environment_slug: node-js
     envs:
-    - key: VITE_API_URL
-      scope: BUILD_TIME
-      value: ${api.PUBLIC_URL}
-    - key: VITE_API_PATH
-      scope: RUN_AND_BUILD_TIME
-      value: ${api.PUBLIC_ROUTE_PATH}
+      - key: VITE_API_URL
+        scope: BUILD_TIME
+        value: ${api.PUBLIC_URL}
+      - key: VITE_API_PATH
+        scope: RUN_AND_BUILD_TIME
+        value: ${api.PUBLIC_ROUTE_PATH}
     github:
       branch: main
       deploy_on_push: true
