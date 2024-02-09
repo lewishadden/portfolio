@@ -4,9 +4,9 @@ import { Formik } from "formik";
 import { object, string } from "yup";
 import { Icon } from "@iconify/react";
 
-import { apiServer } from "config/global";
-
 import "./ContactForm.scss";
+
+const { VITE_API_URL } = import.meta.env;
 
 const ContactForm = ({ onSuccess, onFail }) => {
   const [loading, setLoading] = useState(false);
@@ -20,7 +20,7 @@ const ContactForm = ({ onSuccess, onFail }) => {
 
   const handleSubmit = async ({ firstName, lastName, email, message }) => {
     setLoading(true);
-    const response = await fetch(`${apiServer}/api/api/sendmail`, {
+    const response = await fetch(`${VITE_API_URL}/v1/sendmail`, {
       method: "POST",
       body: JSON.stringify({ firstName, lastName, email, message }),
       headers: { "Content-Type": "application/json" },
