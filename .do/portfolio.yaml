@@ -13,6 +13,8 @@ domains:
   - domain: www.lewishadden.com
     type: ALIAS
     zone: lewishadden.com
+features:
+  - buildpack-stack=ubuntu-22
 functions:
   - envs:
       - key: SMTP_HOST

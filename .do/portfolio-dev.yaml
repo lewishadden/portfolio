@@ -7,6 +7,8 @@ domains:
   - domain: portfolio-dev.lewishadden.com
     type: PRIMARY
     zone: lewishadden.com
+features:
+  - buildpack-stack=ubuntu-22
 functions:
   - envs:
       - key: SMTP_HOST
