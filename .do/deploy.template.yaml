@@ -1,5 +1,5 @@
 spec:
-  name: portfolio
+  name: portfolio-dev
   region: lon
   alerts:
     - rule: DEPLOYMENT_FAILED
@@ -14,8 +14,6 @@ spec:
     - domain: www.lewishadden.com
       type: ALIAS
       zone: lewishadden.com
-  features:
-    - buildpack-stack=ubuntu-22
   functions:
     - envs:
         - key: SMTP_HOST
@@ -39,6 +37,11 @@ spec:
   ingress:
     rules:
       - component:
+          name: website
+        match:
+          path:
+            prefix: /
+      - component:
           name: api
         cors:
           allow_origins:
@@ -46,11 +49,6 @@ spec:
         match:
           path:
             prefix: /api
-      - component:
-          name: website
-        match:
-          path:
-            prefix: /
   static_sites:
     - build_command: npm run build
       environment_slug: node-js
@@ -59,7 +57,7 @@ spec:
           scope: BUILD_TIME
           value: ${api.PUBLIC_URL}
         - key: VITE_API_PATH
-          scope: RUN_AND_BUILD_TIME
+          scope: BUILD_TIME
           value: ${api.PUBLIC_ROUTE_PATH}
       github:
         branch: develop
