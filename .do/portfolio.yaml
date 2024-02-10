@@ -4,11 +4,8 @@ alerts:
   - rule: DEPLOYMENT_FAILED
   - rule: DOMAIN_FAILED
 domains:
-  - domain: lewishadden.com
-    type: PRIMARY
-    zone: lewishadden.com
   - domain: portfolio.lewishadden.com
-    type: ALIAS
+    type: PRIMARY
     zone: lewishadden.com
   - domain: www.lewishadden.com
     type: ALIAS
