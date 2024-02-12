@@ -27,7 +27,7 @@
       "projects": "Projects",
       "skills": "Skills",
       "experience": "Experience",
-      "contact": "Contact Me"
+      "contact": "Contact me"
     },
     "contactInfo": [
       {
@@ -165,7 +165,7 @@
     {
       "title": "Audex",
       "startDate": "2022",
-      "description": "Architected and developed the foundations of the Front-End for a major module powering Audex, an online media visualisation and analysis portal. Renowned as a highly-skilled React developer, I was brought onboard to signle-handledly work on the React Front-End for the platforms Analyse module. I began by developing a POC, successfully demonstrating the ability to display a PowerBI graph in a React app which subscribes to the PowerBI data source and renders real-time analysis data. After having delivered on my React competency, I concluded my time on the project after creating the official repository for the Analyse module, boilerplating the underlying technology to power the entire module.",
+      "description": "Architected and developed the foundations of the Front-End for a major module powering Audex, an online media visualisation and analysis portal. Renowned as a highly-skilled React developer, I was brought onboard to single-handledly work on the React Front-End for the platforms Analyse module. I began by developing a POC, successfully demonstrating the ability to display a PowerBI graph in a React app which subscribes to the PowerBI data source and renders real-time analysis data. After having delivered on my React competency, I concluded my time on the project after creating the official repository for the Analyse module, boilerplating the underlying technology to power the entire module.",
       "thumbnail": "solar:chart-bold",
       "images": [
         "images/projects/audex/homepage.png",
@@ -195,7 +195,7 @@
     {
       "title": "Home Greening Microsite",
       "startDate": "2023",
-      "description": "Architected and designed the entire cloud infrastructure for a proposed new micro-site for UK Power Networks. I was the sole architect responsible for infrastructure and solution design. I led the cloud and Front-End development teams during the design and planning phases, guiding them through the solution and implementation. Using Azure as their preferred cloud provider, I worked closely with the client to ensure that my infrastructure design was compliant with their rigid security standards. After working closely with the clients security team, I designed an optimal cloud infrastructure solution that met their functional and security requiremnts. I gathered the data requirements and designed an optimised Cosmos DB database schema I created stunning architecture diagrams, as well as a thorough technical breakdown of the Azure services used, decisions made for each service, and implementation/configuration steps.",
+      "description": "Architected and designed the entire cloud infrastructure for a proposed new micro-site for UK Power Networks. I was the sole architect responsible for infrastructure and solution design. I led the cloud and Front-End development teams during the design and planning phases, guiding them through the solution and implementation. Using Azure as their preferred cloud provider, I worked closely with the client to ensure that my infrastructure design was compliant with their rigid security standards. After working closely with the client's security team, I designed an optimal cloud infrastructure solution that met their functional and security requirements. I analysed the functionality of the microsite to gather the data requirements, and used this to devise the most optimal database schema for Cosmos DB. I created stunning architecture diagrams, as well as a thorough technical design breakdown of the Azure architecture, which included justifications and decisions made for each service, along with implementation & configuration steps.",
       "thumbnail": "mdi:home-electricity",
       "images": [],
       "theme": {
