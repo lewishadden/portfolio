@@ -113,7 +113,10 @@
       "startDate": "2018",
       "description": "Completely transformed and modernised the technology powering Audi UK. From migrating their legacy tech stack onto AWS, to completely overhauling their entire website. In the 5 years that I worked on the Audi project, I played a crucial role in the development and technical innovation of their new infrastructure and cutting-edge web apps. I spent most of my time leading Front End development teams creating new SPA's and cutting-edge technical capabilities, before moving into Full Stack development. I learned a lot along the way and I can confidently say that this has been one of my favourite projects in my professional career",
       "thumbnail": "cbi:audi",
-      "images": ["images/projects/spa/OSB.png", "images/projects/spa/PX.png"],
+      "images": [
+        "images/projects/spa/OSB.png",
+        "images/projects/spa/PX.png"
+      ],
       "theme": {
         "text": "light",
         "border": "light",
@@ -225,7 +228,9 @@
       "company": "Sopra Steria",
       "title": "Cloud Infrastructure Architect",
       "years": "Jun 2023 – Dec 2023",
-      "mainTech": ["Azure"],
+      "mainTech": [
+        "Azure"
+      ],
       "icon": "devicon:azure",
       "technologies": [
         "REST API",
@@ -239,7 +244,12 @@
       "company": "Sopra Steria",
       "title": "Lead Software Engineer",
       "years": "Aug 2022 - Apr 2023",
-      "mainTech": ["Angular 8+", "React", "Flutter", "TypeScript"],
+      "mainTech": [
+        "Angular 8+",
+        "React",
+        "Flutter",
+        "TypeScript"
+      ],
       "icon": "devicon:angularjs",
       "technologies": [
         "Node.js",
@@ -254,7 +264,12 @@
       "company": "IBM",
       "title": "Senior Full Stack Developer",
       "years": "Jan 2022 - Jul 2022",
-      "mainTech": ["React", "Redux", "TypeScript", "AWS"],
+      "mainTech": [
+        "React",
+        "Redux",
+        "TypeScript",
+        "AWS"
+      ],
       "icon": "devicon:react",
       "technologies": [
         "JavaScript",
@@ -280,7 +295,12 @@
       "company": "IBM",
       "title": "Lead Front End Developer",
       "years": "Jan 2021 - Jan 2022",
-      "mainTech": ["React", "Redux", "TypeScript", "AWS"],
+      "mainTech": [
+        "React",
+        "Redux",
+        "TypeScript",
+        "AWS"
+      ],
       "icon": "devicon:react",
       "technologies": [
         "HTML5",
@@ -299,7 +319,12 @@
       "company": "IBM",
       "title": "Front End Developer",
       "years": "Aug 2018 - Jan 2021",
-      "mainTech": ["React", "Redux", "TypeScript", "Adobe Experience Manager"],
+      "mainTech": [
+        "React",
+        "Redux",
+        "TypeScript",
+        "Adobe Experience Manager"
+      ],
       "icon": "devicon:react",
       "technologies": [
         "JavaScript",
@@ -321,7 +346,11 @@
       "company": "IBM",
       "title": "QA Tester",
       "years": "Jan 2018 - Aug 2018",
-      "mainTech": ["Selenium", "WebdriverIO", "Cucumber / Gherkin"],
+      "mainTech": [
+        "Selenium",
+        "WebdriverIO",
+        "Cucumber / Gherkin"
+      ],
       "icon": "skill-icons:selenium",
       "technologies": [
         "BrowserStack",
