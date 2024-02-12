@@ -4,9 +4,12 @@
   "version": "1.0.0",
   "type": "module",
   "scripts": {
-    "dev": "bunx --bun vite",
+    "dev:bun": "bunx --bun vite",
+    "dev": "bun ./server.js",
     "dev:vite": "vite",
-    "build": "bunx --bun vite build",
+    "build:bun": "bunx --bun vite build",
+    "build:client": "vite build --ssrManifest --outDir dist/client",
+    "build:server": "vite build --ssr src/entry-server.tsx --outDir dist/server",
     "build:vite": "tsc && vite build",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
@@ -17,6 +20,7 @@
   "dependencies": {
     "@iconify/react": "^4.1.1",
     "bootstrap": "^5.3.2",
+    "compression": "^1.7.4",
     "formik": "^2.4.5",
     "react": "^18.2.0",
     "react-awesome-slider": "^4.1.0",
@@ -24,6 +28,7 @@
     "react-dom": "^18.2.0",
     "react-type-animation": "^3.2.0",
     "react-vertical-timeline-component": "^3.6.0",
+    "sirv": "^2.0.4",
     "yup": "^1.3.3"
   },
   "devDependencies": {
@@ -36,7 +41,9 @@
     "eslint": "^8.55.0",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.5",
+    "express": "^4.18.2",
     "sass": "^1.69.7",
+    "serve-static": "^1.15.0",
     "typescript": "^5.2.2",
     "vite": "^5.0.8"
   },
