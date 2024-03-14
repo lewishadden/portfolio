@@ -46,5 +46,8 @@
   },
   "optionalDependencies": {
     "@rollup/rollup-linux-x64-gnu": "4.9.6"
+  },
+  "peerDependencies": {
+    "styled-components": "^6.1.8"
   }
 }

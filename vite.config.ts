@@ -11,6 +11,8 @@ export default {
       fonts: true,
       // Other options: https://github.com/GoogleChromeLabs/critters#usage
     },
+    script: "async",
+    entry: "src/index.tsx",
   },
   resolve: {
     alias: [
