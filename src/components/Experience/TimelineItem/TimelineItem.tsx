@@ -1,5 +1,6 @@
-import { VerticalTimelineElement } from "react-vertical-timeline-component";
-import Badge from "react-bootstrap/Badge";
+import pkg from "react-vertical-timeline-component";
+const { VerticalTimelineElement } = pkg;
+import { Badge } from "react-bootstrap";
 import { Icon } from "@iconify/react";
 
 import "./TimelineItem.scss";

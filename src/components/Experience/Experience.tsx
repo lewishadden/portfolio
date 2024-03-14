@@ -1,7 +1,5 @@
-import {
-  VerticalTimeline,
-  VerticalTimelineElement,
-} from "react-vertical-timeline-component";
+import pkg from "react-vertical-timeline-component";
+const { VerticalTimelineElement, VerticalTimeline } = pkg;
 import "react-vertical-timeline-component/style.min.css";
 import { Icon } from "@iconify/react";
 import { Container, Row, Col } from "react-bootstrap";
