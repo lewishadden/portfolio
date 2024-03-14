@@ -1,5 +1,3 @@
-import { useState, useEffect } from "react";
-
 import {
   About,
   Experience,
@@ -12,43 +10,19 @@ import {
 
 import "./App.scss";
 
-const App = () => {
-  const [resumeData, setResumeData] = useState();
-  const [isLoading, setIsLoading] = useState(true);
-
-  useEffect(() => {
-    loadResume();
-  }, []);
-
-  useEffect(() => {
-    if (resumeData) setIsLoading(false);
-  }, [resumeData]);
-
-  const loadResume = async () => {
-    const response = await fetch("portfolio-data.json");
-    const data = await response.json();
-    setResumeData(data);
-  };
+const App = ({ data }) => {
+  const { basicInfo, experience, projects, skills } = data;
 
   return (
-    (!isLoading && (
-      <>
-        <Home basicInfo={resumeData.basicInfo} />
-        <About basicInfo={resumeData.basicInfo} />
-        <Experience
-          experience={resumeData.experience}
-          basicInfo={resumeData.basicInfo}
-        />
-        <Projects
-          projects={resumeData.projects}
-          basicInfo={resumeData.basicInfo}
-        />
-        <Skills skills={resumeData.skills} basicInfo={resumeData.basicInfo} />
-        <Contact basicInfo={resumeData.basicInfo} />
-        <Footer basicInfo={resumeData.basicInfo} />
-      </>
-    )) ||
-    null
+    <>
+      <Home basicInfo={basicInfo} />
+      <About basicInfo={basicInfo} />
+      <Experience experience={experience} basicInfo={basicInfo} />
+      <Projects projects={projects} basicInfo={basicInfo} />
+      <Skills skills={skills} basicInfo={basicInfo} />
+      <Contact basicInfo={basicInfo} />
+      <Footer basicInfo={basicInfo} />
+    </>
   );
 };
 
