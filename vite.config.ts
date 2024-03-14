@@ -5,7 +5,12 @@ import react from "@vitejs/plugin-react-swc";
 export default {
   plugins: [react()],
   ssgOptions: {
-    formatting: "minify",
+    crittersOptions: {
+      // E.g., change the preload strategy
+      preload: "body",
+      fonts: true,
+      // Other options: https://github.com/GoogleChromeLabs/critters#usage
+    },
   },
   resolve: {
     alias: [
