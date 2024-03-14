@@ -6,9 +6,8 @@
   "scripts": {
     "dev:bun": "bunx --bun vite",
     "dev": "bun ./server.ts",
-    "build": "bun run build:client && bun run build:function && bun run build:server",
+    "build": "bun run build:client && bun run build:server",
     "build:client": "vite build --ssrManifest --outDir dist/client",
-    "build:function": "vite build --ssr src/getServerData.tsx --outDir dist/function",
     "build:server": "vite build --ssr src/entry-server.tsx --outDir dist/server",
     "build:vite": "tsc && vite build",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
