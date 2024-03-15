@@ -1,17 +1,9 @@
 import { defineConfig } from "vite";
-import react from "@vitejs/plugin-react-swc";
+import react from "@vitejs/plugin-react";
 
 // https://vitejs.dev/config/
-export default {
+export default defineConfig({
   plugins: [react()],
-  ssgOptions: {
-    crittersOptions: {
-      // E.g., change the preload strategy
-      preload: "body",
-      fonts: true,
-      // Other options: https://github.com/GoogleChromeLabs/critters#usage
-    },
-  },
   resolve: {
     alias: [
       {
@@ -36,4 +28,4 @@ export default {
       },
     ],
   },
-};
+});
