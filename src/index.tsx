@@ -1,14 +1,11 @@
-import { ViteReactSSG } from "vite-react-ssg/single-page";
+import React from "react";
+import ReactDOM from "react-dom/client";
 
 import App from "./App/App";
 import "./index.scss";
 
-import data from "./config/portfolio-data.json";
-
-export const createRoot = ViteReactSSG(<App data={data} />);
-
-// ReactDOM.createRoot(document.getElementById("root")!).render(
-//   <React.StrictMode>
-//     <App />
-//   </React.StrictMode>
-// );
+ReactDOM.createRoot(document.getElementById("root")!).render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>
+);
