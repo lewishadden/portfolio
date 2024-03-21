@@ -497,11 +497,6 @@
         "level": "85"
       },
       {
-        "name": "Linux",
-        "class": "devicon:linux",
-        "level": "85"
-      },
-      {
         "name": "Apache",
         "class": "devicon:apache",
         "level": "75"
