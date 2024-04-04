@@ -10,6 +10,8 @@ import {
   Contact,
 } from "components";
 
+import { VerticalNav } from "common";
+
 import "./App.scss";
 
 const App = () => {
@@ -33,6 +35,7 @@ const App = () => {
   return (
     (!isLoading && (
       <>
+        <VerticalNav />
         <Home basicInfo={resumeData.basicInfo} />
         <About basicInfo={resumeData.basicInfo} />
         <Experience

@@ -15,6 +15,10 @@ export default defineConfig({
         replacement: "/src/components",
       },
       {
+        find: "common",
+        replacement: "/src/common",
+      },
+      {
         find: "config",
         replacement: "/src/config",
       },
