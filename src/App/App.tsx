@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { ParallaxProvider } from "react-scroll-parallax";
 
 import {
   About,
@@ -12,8 +13,10 @@ import {
 
 import "./App.scss";
 
+import { ResumeData } from "../index.d";
+
 const App = () => {
-  const [resumeData, setResumeData] = useState();
+  const [resumeData, setResumeData] = useState<ResumeData | undefined>();
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
@@ -26,13 +29,13 @@ const App = () => {
 
   const loadResume = async () => {
     const response = await fetch("portfolio-data.json");
-    const data = await response.json();
+    const data: ResumeData = await response.json();
     setResumeData(data);
   };
 
   return (
-    (!isLoading && (
-      <>
+    (!isLoading && resumeData && (
+      <ParallaxProvider>
         <Home basicInfo={resumeData.basicInfo} />
         <About basicInfo={resumeData.basicInfo} />
         <Experience
@@ -46,7 +49,7 @@ const App = () => {
         <Skills skills={resumeData.skills} basicInfo={resumeData.basicInfo} />
         <Contact basicInfo={resumeData.basicInfo} />
         <Footer basicInfo={resumeData.basicInfo} />
-      </>
+      </ParallaxProvider>
     )) ||
     null
   );

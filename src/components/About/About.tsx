@@ -1,8 +1,10 @@
 import { Container, Row, Col, Card } from "react-bootstrap";
 
+import { BasicInfo } from "../../index.d";
+
 import "./About.scss";
 
-const About = ({ basicInfo }) => {
+const About = ({ basicInfo }: { basicInfo: BasicInfo }) => {
   const { image, sectionName, description, descriptionHeader } = basicInfo;
 
   const profilepic = "images/" + image;
