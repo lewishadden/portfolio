@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { Container, Row, Col, Toast } from "react-bootstrap";
 import { Icon } from "@iconify/react";
 
@@ -10,17 +10,6 @@ const Contact = ({ basicInfo }) => {
   const [submitted, setSubmitted] = useState(false);
   const [showToast, setShowToast] = useState(false);
   const [error, setError] = useState(false);
-
-  useEffect(() => {
-    if (!showToast && error) setError(false);
-  }, [showToast]);
-
-  useEffect(() => {
-    if (submitted) {
-      if (error) setError(false);
-      setShowToast(true);
-    }
-  }, [submitted]);
 
   const { sectionName, contactInfo } = basicInfo;
   const headingText = sectionName.contact;
@@ -77,7 +66,9 @@ const Contact = ({ basicInfo }) => {
           {!submitted && (
             <ContactForm
               onSuccess={() => {
+                setError(false);
                 setSubmitted(true);
+                setShowToast(true);
               }}
               onFail={() => {
                 setError(true);
@@ -90,7 +81,10 @@ const Contact = ({ basicInfo }) => {
               className="contact__body__submitted-toast text-center mt-5"
               show={showToast}
               animation
-              onClose={() => setShowToast(false)}
+              onClose={() => {
+                setError(false);
+                setShowToast(false);
+              }}
               bg={error ? "danger" : "success"}
             >
               <Toast.Header>
