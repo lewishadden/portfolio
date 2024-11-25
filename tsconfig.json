@@ -20,7 +20,27 @@
     "strict": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-    "noFallthroughCasesInSwitch": true
+    "noFallthroughCasesInSwitch": true,
+    "baseUrl": ".",
+    "paths": {
+      "@/*": [
+        "./src/*",
+        "./dist/*",
+        ""
+      ],
+      "components": [
+        "./src/components"
+      ],
+      "config/*": [
+        "./src/config/*"
+      ],
+      "icons": [
+        "./src/icons"
+      ],
+      "scss/*": [
+        "./src/scss/*"
+      ]
+    },
   },
   "include": [
     "src"

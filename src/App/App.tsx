@@ -11,9 +11,11 @@ import {
   Contact,
 } from "components";
 
+import { ResumeData } from "@/index.d";
+
 import "./App.scss";
 
-import { ResumeData } from "../index.d";
+
 
 const App = () => {
   const [resumeData, setResumeData] = useState<ResumeData | undefined>();

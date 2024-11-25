@@ -1,6 +1,6 @@
 import { Container, Row, Col, Card } from "react-bootstrap";
 
-import { BasicInfo } from "../../index.d";
+import { BasicInfo } from "@/index.d";
 
 import "./About.scss";
 
