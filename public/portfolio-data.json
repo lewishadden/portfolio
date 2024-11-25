@@ -21,7 +21,7 @@
     ],
     "image": "portrait.png",
     "descriptionHeader": "Hello! <span class='wave'>👋</span>",
-    "description": "My name is Lewis, and I'm a highly experienced and qualified Senior Full Stack Engineer. I've been working in the web development industry for almost 7 years. I have led several development teams for large-scale projects and worked as an independent developer on both in-house and public-facing products.<br /><br />In my free time, I enjoy going to the gym, boxing, and playing the guitar.<br /><br />I am currently seeking my next opportunity as a Senior or Lead Full Stack developer, either as a freelancer or under permanent employment.<br /><br />Keep scrolling to see my past projects, skills and experience. You can also find my <a href='#contact'>contact information</a> below to get in touch.",
+    "description": "My name is Lewis, and I'm a highly experienced and qualified Senior Full Stack Engineer. I've been working in the web development industry for over 7 years. I have led several development teams for large-scale projects and worked as an independent developer on both in-house and public-facing products.<br /><br />In my free time, I enjoy going to the gym, boxing, and playing the guitar.<br /><br />I am currently seeking my next opportunity as a Senior or Lead Full Stack developer, either as a freelancer or under permanent employment.<br /><br />Keep scrolling to see my past projects, skills and experience. You can also find my <a href='#contact'>contact information</a> below to get in touch.",
     "sectionName": {
       "about": "About me",
       "projects": "Projects",
@@ -225,6 +225,29 @@
   ],
   "experience": [
     {
+      "company": "ERGO Travel Insurance",
+      "title": "Lead Full Stack Engineer",
+      "years": "Apr 2024 - Nov 2024",
+      "mainTech": [
+        "Next.js",
+        "Azure",
+        "React",
+        "TypeScript",
+        "CSS Modules"
+      ],
+      "icon": "devicon:nextjs",
+      "technologies": [
+        "Function Apps",
+        "Cosmos DB",
+        "Event Hubs",
+        "Blob & Table Storage",
+        "DevOps Pipelines",
+        "Docker",
+        "Node.js",
+        "Jest"
+      ]
+    },
+    {
       "company": "Sopra Steria",
       "title": "Cloud Infrastructure Architect",
       "years": "Jun 2023 – Dec 2023",
@@ -372,6 +395,11 @@
         "level": "100"
       },
       {
+        "name": "Next.js",
+        "class": "devicon:nextjs",
+        "level": "100"
+      },
+      {
         "name": "Redux",
         "class": "devicon:redux",
         "level": "95"
@@ -412,7 +440,7 @@
         "level": "95"
       },
       {
-        "name": "CSS3",
+        "name": "CSS Modules",
         "class": "devicon:css3",
         "level": "95"
       },
@@ -462,6 +490,11 @@
         "level": "85"
       },
       {
+        "name": "Cosmos DB",
+        "class": "devicon:cosmosdb-wordmark",
+        "level": "85"
+      },
+      {
         "name": "PowerBI",
         "class": "logos:microsoft-power-bi",
         "level": "35"
@@ -474,7 +507,17 @@
       {
         "name": "Azure",
         "class": "devicon:azure",
-        "level": "60"
+        "level": "85"
+      },
+      {
+        "name": "DevOps",
+        "class": "devicon:azuredevops",
+        "level": "85"
+      },
+      {
+        "name": "Azure Functions",
+        "class": "mdi:function-variant",
+        "level": "85"
       },
       {
         "name": "Flutter",
@@ -510,6 +553,11 @@
         "name": "Linux",
         "class": "devicon:linux",
         "level": "85"
+      },
+      {
+        "name": "Mantine UI",
+        "class": "logos:mantine-icon",
+        "level": "90"
       },
       {
         "name": "Bootstrap",
@@ -585,6 +633,11 @@
         "name": "JIRA",
         "class": "devicon:jira",
         "level": "80"
+      },
+      {
+        "name": "Notion",
+        "class": "devicon:notion",
+        "level": "75"
       }
     ]
   }
