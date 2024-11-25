@@ -52,7 +52,7 @@ const TimelineItem = ({
     >
       <MainTechBadges />
       <h3 className="vertical-timeline-element-title">{title}</h3>
-      <h4 className="vertical-timeline-element-subtitle">{company}</h4>
+      <h4 className="vertical-timeline-element-subtitle timeline__item__subtitle">{company}</h4>
       <ExtraTechBadges />
     </VerticalTimelineElement>
   );
